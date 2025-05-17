@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { skills } from "@/lib/data";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code, Database, Terminal } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export default function Skills() {
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -32,8 +33,23 @@ export default function Skills() {
   const mlaiSkills = skills.filter(skill => skill.category === 'mlai');
   const toolsSkills = skills.filter(skill => skill.category === 'tools');
 
+  // Function to determine skill level label based on percentage
+  const getSkillLevel = (percentage: number): string => {
+    if (percentage >= 90) return "Expert";
+    if (percentage >= 80) return "Advanced";
+    if (percentage >= 65) return "Intermediate";
+    return "Beginner";
+  };
+
   return (
-    <section id="skills" className="py-20 bg-secondary/30 section-padding">
+    <section id="skills" className="py-20 bg-secondary/30 relative section-padding">
+      {/* Top divider */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-background"></path>
+        </svg>
+      </div>
+
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold font-heading mb-2">
           Technical <span className="text-gradient">Skills</span>
@@ -66,7 +82,9 @@ export default function Skills() {
                         <Code className="w-4 h-4 mr-2 text-primary" />
                         {skill.name}
                       </span>
-                      <span className="text-sm text-foreground/70">{skill.percentage}%</span>
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                        {getSkillLevel(skill.percentage)}
+                      </Badge>
                     </div>
                     <div 
                       className={`skill-progress ${isVisible ? 'animate' : ''}`}
@@ -74,14 +92,19 @@ export default function Skills() {
                         animationDelay: `${index * 100}ms`, 
                       }}
                     >
-                      <div 
-                        className="skill-progress-bar relative overflow-hidden rounded-full bg-gradient-to-r from-primary via-primary to-primary/80"
-                        style={{ 
-                          '--progress-width': `${skill.percentage}%` 
-                        } as React.CSSProperties}
-                      >
-                        {/* Animated shimmer effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
+                      <div className="flex gap-1">
+                        {[1, 2, 3, 4, 5].map((level) => {
+                          const shouldFill = Math.round(skill.percentage / 20) >= level;
+                          return (
+                            <div 
+                              key={level} 
+                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              style={{ 
+                                transitionDelay: `${index * 100 + level * 100}ms`,
+                              }}
+                            />
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -98,7 +121,9 @@ export default function Skills() {
                         <Database className="w-4 h-4 mr-2 text-primary" />
                         {skill.name}
                       </span>
-                      <span className="text-sm text-foreground/70">{skill.percentage}%</span>
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                        {getSkillLevel(skill.percentage)}
+                      </Badge>
                     </div>
                     <div 
                       className={`skill-progress ${isVisible ? 'animate' : ''}`}
@@ -106,14 +131,19 @@ export default function Skills() {
                         animationDelay: `${index * 100}ms`, 
                       }}
                     >
-                      <div 
-                        className="skill-progress-bar relative overflow-hidden rounded-full bg-gradient-to-r from-primary/80 via-primary to-primary/80"
-                        style={{ 
-                          '--progress-width': `${skill.percentage}%` 
-                        } as React.CSSProperties}
-                      >
-                        {/* Animated shimmer effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
+                      <div className="flex gap-1">
+                        {[1, 2, 3, 4, 5].map((level) => {
+                          const shouldFill = Math.round(skill.percentage / 20) >= level;
+                          return (
+                            <div 
+                              key={level} 
+                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              style={{ 
+                                transitionDelay: `${index * 100 + level * 100}ms`,
+                              }}
+                            />
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -130,7 +160,9 @@ export default function Skills() {
                         <Terminal className="w-4 h-4 mr-2 text-primary" />
                         {skill.name}
                       </span>
-                      <span className="text-sm text-foreground/70">{skill.percentage}%</span>
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                        {getSkillLevel(skill.percentage)}
+                      </Badge>
                     </div>
                     <div 
                       className={`skill-progress ${isVisible ? 'animate' : ''}`}
@@ -138,14 +170,19 @@ export default function Skills() {
                         animationDelay: `${index * 100}ms`, 
                       }}
                     >
-                      <div 
-                        className="skill-progress-bar relative overflow-hidden rounded-full bg-gradient-to-r from-primary/70 via-primary/90 to-primary"
-                        style={{ 
-                          '--progress-width': `${skill.percentage}%` 
-                        } as React.CSSProperties}
-                      >
-                        {/* Animated shimmer effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]"></div>
+                      <div className="flex gap-1">
+                        {[1, 2, 3, 4, 5].map((level) => {
+                          const shouldFill = Math.round(skill.percentage / 20) >= level;
+                          return (
+                            <div 
+                              key={level} 
+                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              style={{ 
+                                transitionDelay: `${index * 100 + level * 100}ms`,
+                              }}
+                            />
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -154,6 +191,13 @@ export default function Skills() {
             </TabsContent>
           </div>
         </Tabs>
+      </div>
+
+      {/* Bottom divider */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-background"></path>
+        </svg>
       </div>
     </section>
   );

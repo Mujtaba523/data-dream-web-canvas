@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Timeline from "@/components/Timeline";
 import Publications from "@/components/Publications";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import { useEffect } from "react";
 
@@ -25,6 +26,7 @@ const Index = () => {
         <Projects />
         <Timeline />
         <Publications />
+        <Testimonials />
         <Contact />
         
         <footer className="py-6 border-t border-border">
