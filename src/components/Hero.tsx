@@ -30,7 +30,7 @@ export default function Hero() {
         if (window.particlesJS) {
           window.particlesJS("particles-js", {
             particles: {
-              number: { value: 80, density: { enable: true, value_area: 800 } },
+              number: { value: 100, density: { enable: true, value_area: 800 } },
               color: { value: "#8b5cf6" },
               shape: {
                 type: "circle",
@@ -38,29 +38,30 @@ export default function Hero() {
               },
               opacity: {
                 value: 0.5,
-                random: false,
-                anim: { enable: false },
+                random: true,
+                anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false },
               },
               size: {
                 value: 3,
                 random: true,
-                anim: { enable: false },
+                anim: { enable: true, speed: 2, size_min: 0.1, sync: false },
               },
               line_linked: {
                 enable: true,
                 distance: 150,
                 color: "#8b5cf6",
-                opacity: 0.2,
+                opacity: 0.3,
                 width: 1,
               },
               move: {
                 enable: true,
-                speed: 2,
+                speed: 3,
                 direction: "none",
-                random: false,
+                random: true,
                 straight: false,
                 out_mode: "out",
                 bounce: false,
+                attract: { enable: true, rotateX: 600, rotateY: 1200 },
               },
             },
             interactivity: {
@@ -117,7 +118,7 @@ export default function Hero() {
       <div className="container mx-auto z-10 flex flex-col gap-6 max-w-4xl text-center">
         <p className="text-primary font-medium">Hello, I'm</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading">
-          John Doe
+          Mujtaba Mateen
         </h1>
         <h2 className="text-2xl md:text-3xl text-foreground/80 mb-4">
           Data Scientist & AI Developer

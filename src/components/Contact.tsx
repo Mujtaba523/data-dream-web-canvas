@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Github, Linkedin, Mail, FileText, Download, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Download, ExternalLink, MapPin, Phone } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -90,9 +90,35 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-foreground/70">Email</div>
-                  <a href="mailto:johndoe@example.com" className="hover:text-primary">
-                    johndoe@example.com
+                  <a href="mailto:mujtabamateen12@gmail.com" className="hover:text-primary">
+                    mujtabamateen12@gmail.com
                   </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-6 flex gap-4 items-center">
+                <div className="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-sm text-foreground/70">Phone</div>
+                  <a href="tel:+923273374538" className="hover:text-primary">
+                    +92 327 3374538
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm">
+              <CardContent className="p-6 flex gap-4 items-center">
+                <div className="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-sm text-foreground/70">Location</div>
+                  <div>Karachi, Pakistan</div>
                 </div>
               </CardContent>
             </Card>
@@ -110,7 +136,7 @@ export default function Contact() {
                 <Button variant="outline" className="rounded-full h-10 w-10 p-0" aria-label="Download Resume">
                   <a 
                     href="#" 
-                    download="John_Doe_Resume.pdf"
+                    download="Mujtaba_Mateen_Resume.pdf"
                     className="flex items-center justify-center w-full h-full"
                     aria-label="Download Resume"
                   >
@@ -133,7 +159,7 @@ export default function Contact() {
               </Button>
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://linkedin.com/in/mujtaba-mateen" 
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
@@ -143,7 +169,7 @@ export default function Contact() {
               </Button>
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="mailto:johndoe@example.com"
+                  href="mailto:mujtabamateen12@gmail.com"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />

@@ -1,7 +1,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText } from "lucide-react";
+import { FileText, MapPin, Languages } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export default function About() {
   return (
@@ -18,8 +19,8 @@ export default function About() {
             <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-primary p-2">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                alt="John Doe - Data Scientist & AI Developer"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+                alt="Mujtaba Mateen - Data Scientist & AI Developer"
                 className="w-full h-full object-cover rounded-xl"
               />
             </div>
@@ -27,44 +28,49 @@ export default function About() {
 
           {/* Content column */}
           <div className="col-span-1 md:col-span-8">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 flex items-center gap-1">
+                <MapPin className="w-3 h-3" /> Karachi, Pakistan
+              </Badge>
+              <Badge className="bg-primary/20 text-primary hover:bg-primary/30 flex items-center gap-1">
+                <Languages className="w-3 h-3" /> English, Urdu
+              </Badge>
+            </div>
+            
             <h3 className="text-xl font-bold mb-4">
               Data Scientist & AI Developer
             </h3>
-            <p className="text-lg leading-relaxed mb-6 text-foreground/80">
-              I'm a passionate AI practitioner with over 5 years of experience developing machine learning 
-              and deep learning solutions. My expertise spans multiple domains including natural language 
-              processing, computer vision, and predictive analytics.
+            <p className="text-lg leading-relaxed mb-4 text-foreground/80">
+              I'm a 2024 graduate with a Bachelor's degree in Computer Information & Systems Engineering from NED University. With a passion for machine learning, artificial intelligence, and data analytics, I specialize in building predictive models and AI solutions that solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed mb-6 text-foreground/80">
-              With a research-driven approach, I transform complex data challenges into actionable 
-              insights and scalable AI systems. I believe in creating responsible AI that solves 
-              real-world problems while maintaining ethical standards.
+              As a Kaggle Expert with 3+ years of professional experience, I've successfully completed 90+ projects in data cleaning, analysis, visualization, machine learning, and deep learning. I'm driven to leverage data to unlock business value and support decision-making through intelligent systems.
             </p>
 
             {/* Stats cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h4 className="text-3xl font-bold text-primary">5+</h4>
+                  <h4 className="text-3xl font-bold text-primary">3+</h4>
                   <p className="text-sm">Years Experience</p>
                 </CardContent>
               </Card>
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h4 className="text-3xl font-bold text-primary">20+</h4>
+                  <h4 className="text-3xl font-bold text-primary">90+</h4>
                   <p className="text-sm">Projects</p>
                 </CardContent>
               </Card>
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h4 className="text-3xl font-bold text-primary">12+</h4>
-                  <p className="text-sm">ML Models</p>
+                  <h4 className="text-3xl font-bold text-primary">2</h4>
+                  <p className="text-sm">Publications</p>
                 </CardContent>
               </Card>
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h4 className="text-3xl font-bold text-primary">8+</h4>
-                  <p className="text-sm">Publications</p>
+                  <h4 className="text-3xl font-bold text-primary">7+</h4>
+                  <p className="text-sm">Certifications</p>
                 </CardContent>
               </Card>
             </div>

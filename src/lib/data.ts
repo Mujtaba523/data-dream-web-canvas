@@ -39,13 +39,13 @@ export const skills: SkillType[] = [
     category: "programming",
   },
   {
-    name: "R",
-    percentage: 80,
+    name: "SQL",
+    percentage: 85,
     category: "programming",
   },
   {
-    name: "SQL",
-    percentage: 85,
+    name: "R",
+    percentage: 75,
     category: "programming",
   },
   {
@@ -75,32 +75,42 @@ export const skills: SkillType[] = [
   },
   {
     name: "NLP",
-    percentage: 80,
+    percentage: 88,
     category: "mlai",
   },
   {
-    name: "Data Visualization",
+    name: "Computer Vision",
     percentage: 85,
     category: "mlai",
   },
   {
-    name: "Docker",
-    percentage: 75,
-    category: "tools",
-  },
-  {
-    name: "Git",
+    name: "Data Visualization",
     percentage: 90,
-    category: "tools",
+    category: "mlai",
   },
   {
-    name: "Jupyter",
+    name: "Jupyter/Colab",
     percentage: 95,
     category: "tools",
   },
   {
-    name: "AWS/GCP",
-    percentage: 70,
+    name: "Power BI",
+    percentage: 88,
+    category: "tools",
+  },
+  {
+    name: "Streamlit",
+    percentage: 85,
+    category: "tools",
+  },
+  {
+    name: "Git",
+    percentage: 80,
+    category: "tools",
+  },
+  {
+    name: "MS Excel",
+    percentage: 85,
     category: "tools",
   },
 ];
@@ -108,88 +118,116 @@ export const skills: SkillType[] = [
 export const projects: ProjectType[] = [
   {
     id: "1",
-    title: "NLP Document Classifier",
+    title: "Voice Cloning System (FYP)",
     description:
-      "Built an NLP model to automatically classify legal documents into 12 different categories with 94% accuracy, reducing manual classification time by 80%.",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    tags: ["NLP", "Python", "TensorFlow", "BERT"],
+      "Fine-tuned XTTs model on 10 hours of recorded speech to create a deep learning-based voice cloning system. Achieved Mean Opinion Score (MOS) of 3.14 for naturalness and similarity to the original speaker.",
+    image: "https://images.unsplash.com/photo-1589254065909-b7086229d08c",
+    tags: ["Deep Learning", "NLP", "Audio Processing", "Python"],
     githubUrl: "#",
     demoUrl: "#",
   },
   {
     id: "2",
-    title: "Predictive Maintenance System",
+    title: "Interviewing Expert System",
     description:
-      "Developed a machine learning system to predict equipment failures before they occur, resulting in a 35% reduction in downtime for manufacturing clients.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    tags: ["Time Series", "PyTorch", "IoT", "Dashboard"],
+      "Developed an NLP-driven expert system to ask technical questions during interviews and score responses based on keyword similarity. Achieved 85% accuracy in evaluating technical answers.",
+    image: "https://images.unsplash.com/photo-1560264280-88b68371db39",
+    tags: ["NLP", "Machine Learning", "Python", "Interviews"],
     githubUrl: "#",
   },
   {
     id: "3",
-    title: "Customer Churn Prediction",
+    title: "Alzheimer's Detection via MRI Scans",
     description:
-      "Created an ML pipeline to identify at-risk customers, increasing retention by 25% and saving an estimated $2M annually in lost revenue.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    tags: ["Classification", "XGBoost", "Feature Engineering"],
+      "Built a CNN model using TensorFlow and Keras to detect Alzheimer's disease from MRI scans. Implemented as a Streamlit web application for accessibility and research purposes.",
+    image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28",
+    tags: ["CNN", "Medical Imaging", "TensorFlow", "Streamlit"],
     githubUrl: "#",
     demoUrl: "#",
   },
   {
     id: "4",
-    title: "Image Recognition App",
+    title: "Reddit Sentiment Analysis",
     description:
-      "Built a mobile app that uses computer vision to identify plant species from photos with 92% accuracy, helping users diagnose plant diseases.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["Computer Vision", "CNN", "Mobile App", "TensorFlow Lite"],
+      "Implemented multiple ML models including LSTM, Decision Trees, and Logistic Regression to analyze sentiments in Reddit posts. Achieved 96% accuracy using deep learning and NLP techniques.",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    tags: ["LSTM", "NLP", "Sentiment Analysis", "Deep Learning"],
     githubUrl: "#",
+  },
+  {
+    id: "5",
+    title: "EMEA Sales Dashboard",
+    description:
+      "Developed a comprehensive Power BI dashboard for real-time sales performance analysis across the EMEA region with customizable visualizations and filters for product and regional analysis.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    tags: ["Power BI", "Data Visualization", "Business Analytics"],
+    githubUrl: "#",
+  },
+  {
+    id: "6",
+    title: "Finance Pro Dashboard",
+    description:
+      "Created a real-time stock visualization and currency conversion dashboard for tracking prices, analyzing trends, and making informed financial decisions with an intuitive interface.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    tags: ["Financial Analysis", "Data Visualization", "Streamlit", "Python"],
+    githubUrl: "#",
+    demoUrl: "#",
   },
 ];
 
 export const timelineItems: TimelineItemType[] = [
   {
     id: "exp1",
-    title: "Senior Data Scientist",
-    organization: "TechCorp AI",
-    period: "2021 - Present",
+    title: "GTP Officer (IT Enterprise Architecture & SQA)",
+    organization: "1Link Pvt Ltd",
+    period: "Aug 2024 - Present",
     description:
-      "Lead a team of data scientists in developing machine learning models for predictive maintenance and anomaly detection. Implemented MLOps practices that reduced model deployment time by 60%.",
+      "Performing functional/UAT testing for IBFT and Bill Payment systems. Automated QA processes reducing timelines by 70%.",
     type: "experience",
   },
   {
     id: "exp2",
-    title: "Data Scientist",
-    organization: "DataViz Solutions",
-    period: "2018 - 2021",
+    title: "Machine Learning Intern",
+    organization: "Coding Samurai",
+    period: "Sep 2023 - Oct 2023",
     description:
-      "Developed NLP models for sentiment analysis and document classification. Created data visualization dashboards that increased stakeholder engagement by 40%.",
+      "Worked on NLP & Deep Learning projects, including model building and deployment. Gained hands-on experience with cutting-edge AI technologies.",
     type: "experience",
   },
   {
     id: "exp3",
-    title: "Machine Learning Intern",
-    organization: "AI Innovations Lab",
-    period: "2017 - 2018",
+    title: "Level 2 Data Science Seller",
+    organization: "Fiverr",
+    period: "Jun 2022 - Oct 2023",
     description:
-      "Assisted in research and development of deep learning models for image recognition tasks. Published a paper on efficient CNN architectures.",
+      "Delivered 90+ projects including Python/Excel/SQL data analysis, Power BI reports, GUI development and ML model implementation for clients worldwide.",
     type: "experience",
   },
   {
     id: "edu1",
-    title: "M.S. in Computer Science, AI Specialization",
-    organization: "Massachusetts Institute of Technology",
-    period: "2015 - 2017",
+    title: "B.E. in Computer Information & Systems Engineering",
+    organization: "NED University of Engineering & Technology",
+    period: "2020 - 2024",
     description:
-      "Focused on machine learning algorithms and deep learning. Thesis on 'Efficient Attention Mechanisms for NLP Tasks'.",
+      "CGPA: 3.90. Specialized in data science and artificial intelligence applications. Final year project: Deep Learning Based Voice Cloning.",
     type: "education",
   },
   {
     id: "edu2",
-    title: "B.S. in Computer Science & Mathematics",
-    organization: "Stanford University",
-    period: "2011 - 2015",
+    title: "Intermediate",
+    organization: "Adamjee Government Science College",
+    period: "2018 - 2020",
     description:
-      "Double major with focus on algorithmic foundations and statistical methods. Research assistant in the AI lab.",
+      "Pre-Engineering. Final grade: 85%.",
+    type: "education",
+  },
+  {
+    id: "edu3",
+    title: "Matriculation",
+    organization: "Shaheen Public School",
+    period: "2018",
+    description:
+      "Science Group. Final grade: 88%.",
     type: "education",
   },
 ];
@@ -197,23 +235,51 @@ export const timelineItems: TimelineItemType[] = [
 export const certifications: CertificationType[] = [
   {
     id: "cert1",
-    title: "Deep Learning Specialization",
-    organization: "DeepLearning.AI",
-    date: "2020",
+    title: "IBM Data Science Professional Certificate",
+    organization: "Coursera",
+    date: "2023",
     url: "#",
   },
   {
     id: "cert2",
-    title: "TensorFlow Developer Certification",
-    organization: "Google",
-    date: "2019",
+    title: "Introduction to TensorFlow for AI/ML/DL",
+    organization: "Coursera",
+    date: "2023",
     url: "#",
   },
   {
     id: "cert3",
-    title: "AWS Machine Learning Specialty",
-    organization: "Amazon Web Services",
-    date: "2021",
+    title: "Python for Everybody Specialization",
+    organization: "Coursera",
+    date: "2022",
+    url: "#",
+  },
+  {
+    id: "cert4",
+    title: "Cloud Computing Basics",
+    organization: "Coursera",
+    date: "2022",
+    url: "#",
+  },
+  {
+    id: "cert5",
+    title: "Problem Solving (Basic)",
+    organization: "HackerRank",
+    date: "2023",
+    url: "#",
+  },
+  {
+    id: "cert6",
+    title: "SQL (Basic)",
+    organization: "HackerRank",
+    date: "2023",
+    url: "#",
+  },
+  {
+    id: "cert7",
+    title: "Data Analytics & BI",
+    organization: "DigiSkills.pk",
+    date: "2022",
     url: "#",
   },
 ];
@@ -224,5 +290,23 @@ export const typingTexts = [
   "NLP Specialist",
   "Data Engineer",
   "Data Analytics Expert",
-  "AI Solution Architect"
+  "Computer Vision Expert",
+  "Kaggle Expert"
+];
+
+export const publications = [
+  {
+    id: "pub1",
+    title: "Analyzing machine learning algorithms in predicting Ranikot swelling at different compaction pressures in presence of carbon supported TiO2 water based mud",
+    publisher: "Springer",
+    date: "Feb 19, 2025",
+    url: "#"
+  },
+  {
+    id: "pub2",
+    title: "A Novel Technique in Determining Mud Cake Permeability in SiO2 Nanoparticles and KCl Salt Water Based Drilling Fluid using Deep Learning Algorithm",
+    publisher: "International Journal of Petroleum Technology",
+    date: "Oct 28, 2024",
+    url: "#"
+  }
 ];
