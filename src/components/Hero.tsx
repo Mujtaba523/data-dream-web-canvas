@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { typingTexts } from "@/lib/data";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import particlesJS from "particles.js"; // This won't work as expected
 
 export default function Hero() {
   const [typingIndex, setTypingIndex] = useState(0);
@@ -11,57 +12,64 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    // Initialize particles.js
-    if (typeof window !== "undefined" && window.particlesJS) {
-      window.particlesJS("particles-js", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#8b5cf6" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: { enable: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: false },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#8b5cf6",
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 140, line_linked: { opacity: 0.5 } },
-            push: { particles_nb: 4 },
-          },
-        },
-        retina_detect: true,
-      });
+    // Initialize particles directly without using the particlesJS library
+    // We'll use a script tag to load particles.js in index.html instead
+    if (typeof window !== "undefined") {
+      // Check if particles-js container exists
+      if (document.getElementById("particles-js")) {
+        // Use window object to check if particlesJS is available
+        if (window.particlesJS) {
+          window.particlesJS("particles-js", {
+            particles: {
+              number: { value: 80, density: { enable: true, value_area: 800 } },
+              color: { value: "#8b5cf6" },
+              shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" },
+              },
+              opacity: {
+                value: 0.5,
+                random: false,
+                anim: { enable: false },
+              },
+              size: {
+                value: 3,
+                random: true,
+                anim: { enable: false },
+              },
+              line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#8b5cf6",
+                opacity: 0.2,
+                width: 1,
+              },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+              },
+            },
+            interactivity: {
+              detect_on: "canvas",
+              events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" },
+                resize: true,
+              },
+              modes: {
+                grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                push: { particles_nb: 4 },
+              },
+            },
+            retina_detect: true,
+          });
+        }
+      }
     }
   }, []);
 
@@ -95,7 +103,7 @@ export default function Hero() {
       id="home" 
       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-background section-padding"
     >
-      <div id="particles-js" aria-hidden="true"></div>
+      <div id="particles-js" className="absolute inset-0 z-0" aria-hidden="true"></div>
       
       <div className="container mx-auto z-10 flex flex-col gap-6 max-w-4xl text-center">
         <p className="text-primary font-medium">Hello, I'm</p>

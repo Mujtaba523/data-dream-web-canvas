@@ -223,5 +223,6 @@ export const typingTexts = [
   "Deep Learning Researcher",
   "NLP Specialist",
   "Data Engineer",
+  "Data Analytics Expert",
   "AI Solution Architect"
 ];
