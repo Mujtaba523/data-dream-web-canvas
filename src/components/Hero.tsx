@@ -4,6 +4,16 @@ import { typingTexts } from "@/lib/data";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Define the particlesJS interface on window object
+declare global {
+  interface Window {
+    particlesJS: (
+      id: string,
+      options: any
+    ) => void;
+  }
+}
+
 export default function Hero() {
   const [typingIndex, setTypingIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
