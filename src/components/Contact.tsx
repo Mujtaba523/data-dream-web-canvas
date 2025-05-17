@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Download, ExternalLink } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -97,6 +97,29 @@ export default function Contact() {
               </CardContent>
             </Card>
 
+            {/* Resume Download Card */}
+            <Card className="bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-colors">
+              <CardContent className="p-6 flex gap-4 items-center">
+                <div className="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-sm text-foreground/70">Resume</div>
+                  <div className="text-base">Download my resume</div>
+                </div>
+                <Button variant="outline" className="rounded-full h-10 w-10 p-0" aria-label="Download Resume">
+                  <a 
+                    href="#" 
+                    download="John_Doe_Resume.pdf"
+                    className="flex items-center justify-center w-full h-full"
+                    aria-label="Download Resume"
+                  >
+                    <Download className="w-4 h-4" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
             <div className="flex flex-wrap gap-4">
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
@@ -124,14 +147,6 @@ export default function Contact() {
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full" asChild>
-                <a 
-                  href="#" 
-                  aria-label="Download Resume"
-                >
-                  <FileText className="w-5 h-5" />
                 </a>
               </Button>
             </div>

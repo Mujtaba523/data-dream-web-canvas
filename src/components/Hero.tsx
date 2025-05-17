@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { typingTexts } from "@/lib/data";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import particlesJS from "particles.js"; // This won't work as expected
 
 export default function Hero() {
   const [typingIndex, setTypingIndex] = useState(0);
@@ -12,12 +11,12 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   useEffect(() => {
-    // Initialize particles directly without using the particlesJS library
+    // Initialize particles directly without using the particlesJS import
     // We'll use a script tag to load particles.js in index.html instead
     if (typeof window !== "undefined") {
       // Check if particles-js container exists
       if (document.getElementById("particles-js")) {
-        // Use window object to check if particlesJS is available
+        // Use window object to check if particlesJS is available from the CDN
         if (window.particlesJS) {
           window.particlesJS("particles-js", {
             particles: {
