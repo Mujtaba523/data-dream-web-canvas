@@ -215,7 +215,7 @@ export const projects = [
     description: "Fine-tuned an X-TTS voice cloning model on 10+ hours of recorded speech data. Achieved a Mean Opinion Score (MOS) of 3.14, indicating realistic and intelligible voice output. Focused on high-quality speech synthesis for personalized voice replication.",
     tags: ["Machine Learning", "Audio Processing", "Large Language Model", "Pytorch"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT1,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/Urdu-Voice-Cloning",
     demoUrl: "#" // Placeholder for demo URL
   },
   {
@@ -224,7 +224,7 @@ export const projects = [
     description: "NLP-driven expert system that dynamically asks and scores technical interview answers using keyword similarity and trained models. Achieved 85% scoring accuracy.",
     tags: ["NLP", "Python", "Deep Learning", "Tensorflow"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT2,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/MuneebUllahKhan222/Recruitment.ai",
     demoUrl: "#" // Placeholder for demo URL
   },
   {
@@ -233,7 +233,7 @@ export const projects = [
     description: "Developed a CNN model using TensorFlow and Keras to classify Alzheimer's from MRI images. Deployed as an interactive web application using Streamlit.",
     tags: ["CNN", "Medical Imaging", "TensorFlow", "Streamlit"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT3,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/Alzheimer-sDiseaseClassifier",
     demoUrl: "#"
   },
   {
@@ -242,7 +242,7 @@ export const projects = [
     description: "Trained LSTM and traditional ML models to classify sentiment on Reddit posts with up to 96% accuracy using deep learning and NLP techniques.",
     tags: ["NLP", "LSTM", "Sentiment Analysis", "Deep Learning"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT4,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/CODING-SAMURAI-INTERNSHIP-TASKS/tree/main/Task%203%20Sentiment%20Analysis%20on%20Social%20Media%20Posts",
     demoUrl: "#"
   },
   {
@@ -251,7 +251,7 @@ export const projects = [
     description: "Analyzed Kaggle-sourced weather data using multiple machine learning models and built a web app in Streamlit for real-time weather classification.",
     tags: ["Machine Learning", "Weather Data", "Streamlit", "Python"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT5,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/Weather-Classifier",
     demoUrl: "#"
   },
   {
@@ -260,7 +260,7 @@ export const projects = [
     description: "Designed a Power BI dashboard to visualize real-time sales performance across the EMEA region with interactive filters and KPI-based visualizations.",
     tags: ["Power BI", "Sales Analytics", "Dashboard", "Visualization"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT6,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/EMEA-Dashboard",
     demoUrl: "#"
   },
   {
@@ -269,7 +269,7 @@ export const projects = [
     description: "Created a detailed Power BI dashboard analyzing unicorn companies by revenue, market share, and user growth with drill-down and filtering features.",
     tags: ["Power BI", "Business Intelligence", "Dashboard"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT7,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/MavenAnalyticsSpaceChallenge",
     demoUrl: "#"
   },
   {
@@ -278,7 +278,7 @@ export const projects = [
     description: "Built a financial dashboard for real-time stock visualization and currency conversion using APIs. Integrated with Streamlit for user interaction.",
     tags: ["Finance", "APIs", "Streamlit", "Dashboard"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT8,
-    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    githubUrl: "https://github.com/Mujtaba523/Finance-Pro",
     demoUrl: "#"
   }
 ];
@@ -309,8 +309,7 @@ export const publications = [
 export const typingTexts = [
   "Machine Learning Engineer",
   "Data Scientist",
-  "AI Researcher",
-  "Problem Solver",
+  "BI Analyst",
   "Deep Learning Specialist"
 ];
 
