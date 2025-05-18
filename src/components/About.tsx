@@ -32,7 +32,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-xl"></div>
               {/* Profile image placeholder */}
               <img
-                src="PROFILE_IMAGE_URL" // PLACEHOLDER: Replace with your profile image URL
+                src="https://i.postimg.cc/L4qvS9jC/1747319068372.jpg" // PLACEHOLDER: Replace with your profile image URL
                 alt="Mujtaba Mateen - Data Scientist & AI Developer"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -57,14 +57,14 @@ export default function About() {
               I'm a 2024 graduate with a Bachelor's degree in Computer Information & Systems Engineering from NED University. With a passion for machine learning, artificial intelligence, and data analytics, I specialize in building predictive models and AI solutions that solve real-world problems.
             </p>
             <p className="text-lg leading-relaxed mb-6 text-foreground/80">
-              As a Kaggle Expert with 3+ years of professional experience, I've successfully completed 90+ projects in data cleaning, analysis, visualization, machine learning, and deep learning. I'm driven to leverage data to unlock business value and support decision-making through intelligent systems.
+              As a Kaggle Expert with 2+ years of professional experience, I've successfully completed 90+ projects in data cleaning, analysis, visualization, machine learning, and deep learning. I'm driven to leverage data to unlock business value and support decision-making through intelligent systems.
             </p>
 
             {/* Stats cards section */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h4 className="text-3xl font-bold text-primary">3+</h4>
+                  <h4 className="text-3xl font-bold text-primary">2+</h4>
                   <p className="text-sm">Years Experience</p>
                 </CardContent>
               </Card>
@@ -92,7 +92,7 @@ export default function About() {
             <div className="flex flex-wrap gap-4">
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="GITHUB_URL" // PLACEHOLDER: Replace with your GitHub URL
+                  href="https://github.com/Mujtaba523" // PLACEHOLDER: Replace with your GitHub URL
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
@@ -102,7 +102,7 @@ export default function About() {
               </Button>
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="LINKEDIN_URL" // PLACEHOLDER: Replace with your LinkedIn URL
+                  href="https://www.linkedin.com/in/mujtaba-mateen/" // PLACEHOLDER: Replace with your LinkedIn URL
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
@@ -112,7 +112,7 @@ export default function About() {
               </Button>
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="mailto:YOUR_EMAIL" // PLACEHOLDER: Replace with your email
+                  href="mailto:mujtabamateen12@gmail.com" // PLACEHOLDER: Replace with your email
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5" />
@@ -121,7 +121,7 @@ export default function About() {
               {/* Added Kaggle icon */}
               <Button variant="outline" size="icon" className="rounded-full" asChild>
                 <a 
-                  href="KAGGLE_URL" // PLACEHOLDER: Replace with your Kaggle URL
+                  href="https://www.kaggle.com/mujtabamatin" // PLACEHOLDER: Replace with your Kaggle URL
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Kaggle Profile"

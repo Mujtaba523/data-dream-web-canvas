@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
                 <Button variant="outline" className="rounded-full h-10 w-10 p-0" aria-label="Download Resume">
                   <a 
-                    href="YOUR_RESUME_URL_HERE" 
+                    href="data-dream-web-canvas\Mujtaba's Updated Resume-II.pdf" 
                     download="Mujtaba_Mateen_Resume.pdf"
                     className="flex items-center justify-center w-full h-full"
                     aria-label="Download Resume"

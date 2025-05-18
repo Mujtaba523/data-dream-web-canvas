@@ -6,20 +6,35 @@
 // ======================================================
 export const PLACEHOLDERS = {
   // Social media profiles
-  GITHUB_URL: "https://github.com/yourusername",
-  LINKEDIN_URL: "https://linkedin.com/in/yourusername",
-  KAGGLE_URL: "https://kaggle.com/yourusername",
-  EMAIL: "your.email@example.com",
+  GITHUB_URL: "https://github.com/Mujtaba523",
+  LINKEDIN_URL: "www.linkedin.com/in/mujtaba-mateen",
+  KAGGLE_URL: "https://www.kaggle.com/mujtabamatin",
+  EMAIL: "mujtaba.mateen12@gmail.com",
   
   // Resume download link
-  RESUME_URL: "/path-to-your-resume.pdf",
+  RESUME_URL: "https://drive.google.com/file/d/1dZ8HUQ77kDJDj0ojmWHHy_J24ZVRQScY/view?usp=sharing",
   
   // Images
   PROFILE_IMAGE: "/path-to-profile-image.jpg",
   PROJECT_IMAGES: {
-    PROJECT1: "/path-to-project1-image.jpg",
-    PROJECT2: "/path-to-project2-image.jpg",
-    // Add more project images as needed
+    PROJECT1: "https://i.postimg.cc/CxQL3pkg/FYP.png",
+    PROJECT2: "https://i.postimg.cc/yxbbVjPk/rai1.png",
+    PROJECT3: "https://i.postimg.cc/K8yd4qbM/Untitled1.png",
+    PROJECT4: "https://i.postimg.cc/TPtS7TDV/screencapture-localhost-8501-2023-09-25-22-11-18.png",
+    PROJECT5: "https://i.postimg.cc/662ScJ5Z/1711797510330.jpg",
+    PROJECT6: "https://i.postimg.cc/nhZPnXKK/Untitled-3.png",
+    PROJECT7: "https://i.postimg.cc/fRKgyM5G/Space-Analytics-Dashboard.png",
+    PROJECT8: "https://i.postimg.cc/d17W5rvF/Untitled.png",},
+
+  CERTIFICATE_URL: {
+    CERT1: "https://www.cloudskillsboost.google/public_profiles/23f84474-7463-4fee-8fc5-72d413cbde9d/badges/4667273?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+    CERT2: "https://www.coursera.org/account/accomplishments/certificate/K5QV5ARC9EQV",
+    CERT3: "https://digiskills.pk/verify/",
+    CERT4: "https://www.coursera.org/account/accomplishments/professional-cert/R46UBS7S8FWG",
+    CERT5: "https://coursera.org/verify/EKZBDDLQ7RF9",
+    CERT6: "https://www.udemy.com/certificate/UC-b901cf6a-e154-4b42-af8f-54376baf1179/",
+    CERT7: "https://coursera.org/verify/K6T5S9CLN8UA",
+    CERT8: "coursera.org/verify/specialization/VZ5GF938EHSS",
   },
 };
 
@@ -30,35 +45,51 @@ export const timelineItems = [
   {
     id: "exp1",
     type: "experience",
-    period: "2023 - Present",
-    title: "Data Scientist",
-    organization: "Tech Company Inc.",
-    description: "Leading machine learning projects and developing predictive models for business forecasting. Implemented NLP solutions that improved customer service efficiency by 35%.",
+    period: "Aug 2024 – Present",
+    title: "GTP Officer - IT Enterprise Architecture & SQA",
+    organization: "1LINK (Pvt) Ltd",
+    description: "Coordinated functional and UAT testing for Bill Payment System and IBFT according to 1LINK standards. Automated test scripts, improved test environments, and cut project timelines from 1 week to 2 days.",
   },
   {
     id: "exp2",
     type: "experience",
-    period: "2021 - 2023",
-    title: "Machine Learning Engineer",
-    organization: "AI Solutions Ltd.",
-    description: "Developed and deployed machine learning models for image classification and object detection. Optimized existing algorithms for better performance and reduced computational costs.",
+    period: "Sep 2023 – Oct 2023",
+    title: "Machine Learning Intern",
+    organization: "Coding Samurai",
+    description: "Implemented LSTM, decision trees, logistic regression, and Naïve Bayes models for sentiment and species prediction tasks. Achieved 96% accuracy in sentiment analysis and 95% in flower classification.",
+  },
+  {
+    id: "exp3",
+    type: "experience",
+    period: "Jun 2022 – Oct 2023",
+    title: "Level 2 Seller – Data Science",
+    organization: "Fiverr (Freelance)",
+    description: "Delivered data cleaning and analysis services using Python, Excel, and SQL. Created analytical reports using MS Power BI to visualize insights. Built desktop GUIs with PyQt5/Tkinter and developed machine learning and deep learning models for client-specific needs.",
   },
   {
     id: "edu1",
     type: "education",
-    period: "2020 - 2024",
+    period: "2020 – 2024",
     title: "Bachelor's in Computer Information & Systems Engineering",
-    organization: "NED University",
-    description: "Graduated with distinction, specializing in artificial intelligence and machine learning. Completed thesis on deep learning applications in healthcare.",
+    organization: "NED University of Engineering & Technology",
+    description: "CGPA: 3.90",
   },
   {
     id: "edu2",
     type: "education",
-    period: "2018 - 2020",
-    title: "Associate Degree in Computer Science",
-    organization: "City College",
-    description: "Foundation courses in programming, data structures, algorithms, and mathematics. Participated in coding competitions and hackathons.",
+    period: "2018 – 2020",
+    title: "Intermediate (Pre-Engineering)",
+    organization: "Adamjee Government Science College",
+    description: "Grade: 85%",
   },
+  {
+    id: "edu3",
+    type: "education",
+    period: "Until 2018",
+    title: "Matriculation (Science)",
+    organization: "Shaheen Public School",
+    description: "Grade: 88%",
+  }
 ];
 
 // ======================================================
@@ -67,46 +98,60 @@ export const timelineItems = [
 export const certifications = [
   {
     id: "cert1",
-    title: "Machine Learning Specialization",
-    organization: "Coursera - Stanford University",
-    date: "2023",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    title: "Introduction to Generative AI",
+    organization: "Google",
+    date: "Aug 2023",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT1, // Credential ID: 4667273
   },
   {
     id: "cert2",
-    title: "Deep Learning Professional Certificate",
-    organization: "Coursera - DeepLearning.AI",
-    date: "2022",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    title: "Convolutional Neural Networks in TensorFlow",
+    organization: "DeepLearning.AI",
+    date: "Oct 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT2 // Credential ID: K5QV5ARC9EQV
   },
   {
     id: "cert3",
-    title: "TensorFlow Developer Certificate",
-    organization: "Google",
-    date: "2022",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    title: "Data Analytics and Business Intelligence",
+    organization: "DigiSkills.pk",
+    date: "Oct 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT3 // Credential ID: 3MD3USXMK
   },
   {
     id: "cert4",
-    title: "Data Science Professional Certificate",
+    title: "IBM Data Science Professional Certificate",
     organization: "IBM",
-    date: "2021",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    date: "Oct 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT4
   },
   {
     id: "cert5",
-    title: "Python for Data Science",
-    organization: "DataCamp",
-    date: "2021",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    title: "Introduction to TensorFlow for AI, ML & DL",
+    organization: "DeepLearning.AI",
+    date: "Sep 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT5 // Credential ID: EKZBDDLQ7RF9
   },
   {
     id: "cert6",
-    title: "SQL for Data Analysis",
-    organization: "Udacity",
-    date: "2020",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual certificate URL
+    title: "Neural Networks in Python: Deep Learning for Beginners",
+    organization: "Udemy",
+    date: "Aug 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT6 // Credential ID: UC-b901cf6a-e154-4b42-af8f-54376baf1179
   },
+  {
+    id: "cert7",
+    title: "Cloud Computing Basics (Cloud 101)",
+    organization: "LearnQuest",
+    date: "Apr 2022",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT7
+  },
+  {
+    id: "cert8",
+    title: "Python for Everybody (Specialization)",
+    organization: "University of Michigan",
+    date: "Jun 2021",
+    url: PLACEHOLDERS.CERTIFICATE_URL.CERT8 // Credential ID: VZ5GF938EHSS
+  }
 ];
 
 // ======================================================
@@ -115,21 +160,21 @@ export const certifications = [
 export const testimonials = [
   {
     id: "testimonial1",
-    quote: "Mujtaba delivered exceptional machine learning solutions that transformed our business analytics capabilities. His technical expertise and attention to detail were outstanding.",
-    name: "Sarah Johnson",
-    title: "CTO, Tech Innovations Inc."
+    quote: "Excellent job! Working with Mujtaba was a real pleasure. He is a great communicator, extremely knowledgeable, very responsible, hardworking, and responds promptly. Mujtaba is a very talented person, and the job he did was thorough and complete. I would definitely recommend working with Mujtaba.",
+    name: "Teg Keene",
+    title: "Project: Excel Data Extraction & Cleaning"
   },
   {
     id: "testimonial2",
-    quote: "Working with Mujtaba was a game-changer for our data strategy. His insights and expertise in AI helped us implement solutions that significantly improved our decision-making process.",
-    name: "Michael Chen",
-    title: "VP of Data, Global Solutions"
+    quote: "I reviewed Mujtaba's work and was genuinely impressed. Everything was well-organized and functioned exactly as expected. Thank you! I'll definitely reach out to Mujtaba again for future projects.",
+    name: "Safanah Abbas",
+    title: "Project: Build Predictive Models"
   },
   {
     id: "testimonial3",
-    quote: "Mujtaba's work on our predictive analytics platform was impressive. His ability to translate complex technical concepts into business value is rare and valuable.",
-    name: "Priya Sharma",
-    title: "Director of Analytics, FutureTech"
+    quote: "Working with Mujtaba was a fantastic experience. He delivered high-quality work ahead of schedule and communicated clearly throughout the project. I highly recommend him for any data science or Python-related tasks.",
+    name: "Bulugahapitiye Mohottalalage KN Bulugahapitiya",
+    title: "Project: Data Visualization Report and Python Script Development"
   }
 ];
 
@@ -138,28 +183,26 @@ export const testimonials = [
 // ======================================================
 export const skills = [
   // Programming Languages
-  { name: "Python", percentage: 95, category: "programming" },
-  { name: "R", percentage: 85, category: "programming" },
-  { name: "JavaScript", percentage: 80, category: "programming" },
-  { name: "SQL", percentage: 90, category: "programming" },
-  { name: "Java", percentage: 75, category: "programming" },
-  { name: "C++", percentage: 70, category: "programming" },
+  { name: "Python", percentage: 80, category: "programming" },
+  { name: "R", percentage: 40, category: "programming" },
+  { name: "SQL", percentage: 85, category: "programming" },
   
   // ML/AI & Data
-  { name: "TensorFlow/PyTorch", percentage: 90, category: "mlai" },
-  { name: "Scikit-Learn", percentage: 95, category: "mlai" },
-  { name: "NLP", percentage: 85, category: "mlai" },
-  { name: "Computer Vision", percentage: 80, category: "mlai" },
-  { name: "Data Visualization", percentage: 90, category: "mlai" },
-  { name: "Big Data (Spark, Hadoop)", percentage: 75, category: "mlai" },
+  { name: "TensorFlow/PyTorch", percentage: 85, category: "mlai" },
+  { name: "Scikit-Learn", percentage: 85, category: "mlai" },
+  { name: "NumPy", percentage: 80, category: "mlai" },
+  { name: "Pandas", percentage: 95, category: "mlai" },
+  { name: "Seaborn", percentage: 95, category: "mlai" },
+  { name: "Plotly", percentage: 80, category: "mlai" },
   
   // Tools & Platforms
-  { name: "AWS/GCP/Azure", percentage: 85, category: "tools" },
-  { name: "Docker/Kubernetes", percentage: 80, category: "tools" },
-  { name: "Git/GitHub", percentage: 90, category: "tools" },
+  { name: "VS Code", percentage: 80, category: "tools" },
+  { name: "Git/GitHub", percentage: 65, category: "tools" },
   { name: "Jupyter/Colab", percentage: 95, category: "tools" },
-  { name: "Tableau/PowerBI", percentage: 85, category: "tools" },
-  { name: "MLOps", percentage: 75, category: "tools" }
+  { name: "Tableau/MS PowerBI", percentage: 85, category: "tools" },
+  { name: "MS Excel", percentage: 80, category: "tools" },
+  { name: "MySQL Server", percentage: 85, category: "tools" },
+  { name: "Oracle SQL Server", percentage: 80, category: "tools" }
 ];
 
 // ======================================================
@@ -168,39 +211,75 @@ export const skills = [
 export const projects = [
   {
     id: "project1",
-    title: "AI-Powered Image Recognition System",
-    description: "Developed a deep learning model for real-time object detection and classification with 98% accuracy. Implemented using TensorFlow and deployed on AWS SageMaker for scalability and performance.",
-    tags: ["Machine Learning", "Computer Vision", "AWS"],
+    title: "Deep Learning Based Voice Cloning for Urdu Language (Final Year Project)",
+    description: "Fine-tuned an X-TTS voice cloning model on 10+ hours of recorded speech data. Achieved a Mean Opinion Score (MOS) of 3.14, indicating realistic and intelligible voice output. Focused on high-quality speech synthesis for personalized voice replication.",
+    tags: ["Machine Learning", "Audio Processing", "Large Language Model", "Pytorch"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT1,
     githubUrl: PLACEHOLDERS.GITHUB_URL,
     demoUrl: "#" // Placeholder for demo URL
   },
   {
     id: "project2",
-    title: "Natural Language Processing for Customer Support",
-    description: "Created an NLP system to analyze customer support tickets, automatically categorize issues, and suggest solutions. Reduced response time by 45% and improved customer satisfaction scores.",
-    tags: ["NLP", "Python", "Machine Learning"],
+    title: "Deep Learning Based Interviewing Expert System with Knowledge Base",
+    description: "NLP-driven expert system that dynamically asks and scores technical interview answers using keyword similarity and trained models. Achieved 85% scoring accuracy.",
+    tags: ["NLP", "Python", "Deep Learning", "Tensorflow"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT2,
     githubUrl: PLACEHOLDERS.GITHUB_URL,
     demoUrl: "#" // Placeholder for demo URL
   },
   {
     id: "project3",
-    title: "Predictive Analytics Dashboard for Retail",
-    description: "Built an end-to-end analytics solution for predicting inventory needs and sales trends. Integrated multiple data sources and created interactive visualizations for business stakeholders.",
-    tags: ["Data Analytics", "Visualization", "React"],
-    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT1, // Reusing image as placeholder
+    title: "Alzheimer's Detection via MRI Scans",
+    description: "Developed a CNN model using TensorFlow and Keras to classify Alzheimer's from MRI images. Deployed as an interactive web application using Streamlit.",
+    tags: ["CNN", "Medical Imaging", "TensorFlow", "Streamlit"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT3,
     githubUrl: PLACEHOLDERS.GITHUB_URL,
-    demoUrl: "#" // Placeholder for demo URL
+    demoUrl: "#"
   },
   {
     id: "project4",
-    title: "Recommendation Engine for E-commerce",
-    description: "Designed and implemented a collaborative filtering recommendation system that increased average order value by 23%. Optimized for performance to handle millions of user interactions.",
-    tags: ["Recommendation Systems", "Python", "Big Data"],
-    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT2, // Reusing image as placeholder
+    title: "Reddit Sentiment Analysis",
+    description: "Trained LSTM and traditional ML models to classify sentiment on Reddit posts with up to 96% accuracy using deep learning and NLP techniques.",
+    tags: ["NLP", "LSTM", "Sentiment Analysis", "Deep Learning"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT4,
     githubUrl: PLACEHOLDERS.GITHUB_URL,
-    demoUrl: "#" // Placeholder for demo URL
+    demoUrl: "#"
+  },
+  {
+    id: "project5",
+    title: "Weather Classifier",
+    description: "Analyzed Kaggle-sourced weather data using multiple machine learning models and built a web app in Streamlit for real-time weather classification.",
+    tags: ["Machine Learning", "Weather Data", "Streamlit", "Python"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT5,
+    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    demoUrl: "#"
+  },
+  {
+    id: "project6",
+    title: "EMEA Sales Dashboard",
+    description: "Designed a Power BI dashboard to visualize real-time sales performance across the EMEA region with interactive filters and KPI-based visualizations.",
+    tags: ["Power BI", "Sales Analytics", "Dashboard", "Visualization"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT6,
+    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    demoUrl: "#"
+  },
+  {
+    id: "project7",
+    title: "Maven Analytics Space Challenge",
+    description: "Created a detailed Power BI dashboard analyzing unicorn companies by revenue, market share, and user growth with drill-down and filtering features.",
+    tags: ["Power BI", "Business Intelligence", "Dashboard"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT7,
+    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    demoUrl: "#"
+  },
+  {
+    id: "project8",
+    title: "Finance Pro – Stock and Currency Dashboard",
+    description: "Built a financial dashboard for real-time stock visualization and currency conversion using APIs. Integrated with Streamlit for user interaction.",
+    tags: ["Finance", "APIs", "Streamlit", "Dashboard"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT8,
+    githubUrl: PLACEHOLDERS.GITHUB_URL,
+    demoUrl: "#"
   }
 ];
 
@@ -210,32 +289,18 @@ export const projects = [
 export const publications = [
   {
     id: "pub1",
-    title: "Novel Approaches to Deep Learning in Healthcare Diagnostics",
-    publisher: "Journal of AI in Medicine",
-    date: "2023",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual publication URL
+    title: "Analyzing Machine Learning Algorithms in Predicting Ranikot Swelling at Different Compaction Pressures in Presence of Carbon Supported TiO2 Water-Based Mud",
+    publisher: "Springer",
+    date: "Feb 19, 2025",
+    url: "https://link.springer.com/article/10.1007/s41939-025-00770-x"
   },
   {
     id: "pub2",
-    title: "Efficient Natural Language Processing for Low-Resource Languages",
-    publisher: "International Conference on Computational Linguistics",
-    date: "2022",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual publication URL
-  },
-  {
-    id: "pub3",
-    title: "Explainable AI: Making Machine Learning Models Transparent",
-    publisher: "AI Ethics Journal",
-    date: "2022",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual publication URL
-  },
-  {
-    id: "pub4",
-    title: "Real-time Object Detection for Autonomous Vehicles",
-    publisher: "Conference on Computer Vision and Pattern Recognition",
-    date: "2021",
-    url: PLACEHOLDERS.GITHUB_URL, // Replace with actual publication URL
-  }
+    title: "A Novel Technique in Determining Mud Cake Permeability in SiO2 Nanoparticles and KCl Salt Water-Based Drilling Fluid Using Deep Learning Algorithm",
+    publisher: "International Journal of Petroleum Technology",
+    date: "Oct 28, 2024",
+    url: "https://avantipublishers.com/index.php/ijpt/article/view/1549"
+  }  
 ];
 
 // ======================================================
