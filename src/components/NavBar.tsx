@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+// Navigation items for the navbar
 const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -13,11 +13,16 @@ const NAV_ITEMS = [
 ];
 
 export default function NavBar() {
+  // State to track scroll position for styling changes
   const [isScrolled, setIsScrolled] = useState(false);
+  // State to control mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // State to track the currently active section
   const [activeSection, setActiveSection] = useState("home");
+  // Hook to detect if viewport is mobile size
   const isMobile = useIsMobile();
 
+  // Effect to handle scroll events and determine active section
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -50,8 +55,9 @@ export default function NavBar() {
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
+        {/* Site logo/name */}
         <a href="#home" className="text-2xl font-bold text-gradient">
-          John Doe
+          Mujtaba Mateen
         </a>
 
         {/* Mobile menu button */}
@@ -104,7 +110,6 @@ export default function NavBar() {
                 )}
               </a>
             ))}
-            <ThemeToggle />
           </nav>
         )}
 
@@ -125,9 +130,6 @@ export default function NavBar() {
                 {item.label}
               </a>
             ))}
-            <div className="flex justify-end mt-2 px-4">
-              <ThemeToggle />
-            </div>
           </div>
         )}
       </div>

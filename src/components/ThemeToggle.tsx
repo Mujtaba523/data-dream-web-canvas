@@ -1,24 +1,19 @@
 
-import { Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 
+/**
+ * ThemeToggle component - This would normally toggle between light and dark themes,
+ * but has been modified to show only the dark mode icon since we're keeping the app
+ * in dark mode only.
+ */
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  // We still use useTheme but won't actually toggle themes
+  const { theme } = useTheme();
 
   return (
-    <Button 
-      variant="ghost" 
-      size="icon" 
-      onClick={toggleTheme}
-      className="rounded-full"
-      aria-label="Toggle theme"
-    >
-      {theme === "dark" ? (
-        <Sun className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all" />
-      ) : (
-        <Moon className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all" />
-      )}
-    </Button>
+    <div className="rounded-full" aria-label="Dark Mode">
+      <Moon className="h-[1.5rem] w-[1.5rem] text-primary" />
+    </div>
   );
 }
