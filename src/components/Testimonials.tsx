@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react";
 import { testimonials } from "@/lib/data";
+import { Separator } from "@/components/ui/separator";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,35 +39,17 @@ export default function Testimonials() {
               >
                 <Card className="bg-card/50 backdrop-blur-sm border border-primary/20">
                   <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
+                    <div className="flex flex-col items-center gap-4">
                       <div className="bg-primary/10 p-4 rounded-full">
                         <Quote className="w-8 h-8 text-primary" />
                       </div>
-                      <div>
+                      <div className="text-center">
                         <p className="text-lg md:text-xl italic mb-6 text-foreground/80">
                           "{testimonial.quote}"
                         </p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4">
-                            <Avatar className="h-12 w-12 border-2 border-primary/30">
-                              <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                              <AvatarFallback className="bg-primary/20">
-                                {testimonial.name.split(" ").map(name => name[0]).join("")}
-                              </AvatarFallback>
-                            </Avatar>
-                            <div>
-                              <h4 className="font-bold">{testimonial.name}</h4>
-                              <p className="text-sm text-foreground/70">{testimonial.title}</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center">
-                            {[...Array(5)].map((_, i) => (
-                              <Star 
-                                key={i} 
-                                className={`w-4 h-4 ${i < testimonial.rating ? "fill-primary text-primary" : "text-muted-foreground"}`} 
-                              />
-                            ))}
-                          </div>
+                        <div className="flex flex-col items-center">
+                          <h4 className="font-bold">{testimonial.name}</h4>
+                          <p className="text-sm text-foreground/70">{testimonial.title}</p>
                         </div>
                       </div>
                     </div>
@@ -107,6 +89,11 @@ export default function Testimonials() {
             →
           </button>
         </div>
+      </div>
+      
+      {/* Divider between Testimonials and Contact section */}
+      <div className="container mx-auto max-w-7xl mt-20">
+        <Separator className="h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       </div>
     </section>
   );

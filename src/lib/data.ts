@@ -129,57 +129,54 @@ export const projects: ProjectType[] = [
     title: "Voice Cloning System (FYP)",
     description:
       "Fine-tuned XTTs model on 10 hours of recorded speech to create a deep learning-based voice cloning system. Achieved Mean Opinion Score (MOS) of 3.14 for naturalness and similarity to the original speaker.",
-    image: "https://images.unsplash.com/photo-1589254065909-b7086229d08c",
+    image: "YOUR_PROJECT1_IMAGE_URL_HERE",
     tags: ["Deep Learning", "NLP", "Audio Processing", "Python"],
-    githubUrl: "#",
-    demoUrl: "#",
+    githubUrl: "YOUR_PROJECT1_GITHUB_URL_HERE",
   },
   {
     id: "2",
     title: "Interviewing Expert System",
     description:
       "Developed an NLP-driven expert system to ask technical questions during interviews and score responses based on keyword similarity. Achieved 85% accuracy in evaluating technical answers.",
-    image: "https://images.unsplash.com/photo-1560264280-88b68371db39",
+    image: "YOUR_PROJECT2_IMAGE_URL_HERE",
     tags: ["NLP", "Machine Learning", "Python", "Interviews"],
-    githubUrl: "#",
+    githubUrl: "YOUR_PROJECT2_GITHUB_URL_HERE",
   },
   {
     id: "3",
     title: "Alzheimer's Detection via MRI Scans",
     description:
       "Built a CNN model using TensorFlow and Keras to detect Alzheimer's disease from MRI scans. Implemented as a Streamlit web application for accessibility and research purposes.",
-    image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28",
+    image: "YOUR_PROJECT3_IMAGE_URL_HERE",
     tags: ["CNN", "Medical Imaging", "TensorFlow", "Streamlit"],
-    githubUrl: "#",
-    demoUrl: "#",
+    githubUrl: "YOUR_PROJECT3_GITHUB_URL_HERE",
   },
   {
     id: "4",
     title: "Reddit Sentiment Analysis",
     description:
       "Implemented multiple ML models including LSTM, Decision Trees, and Logistic Regression to analyze sentiments in Reddit posts. Achieved 96% accuracy using deep learning and NLP techniques.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+    image: "YOUR_PROJECT4_IMAGE_URL_HERE",
     tags: ["LSTM", "NLP", "Sentiment Analysis", "Deep Learning"],
-    githubUrl: "#",
+    githubUrl: "YOUR_PROJECT4_GITHUB_URL_HERE",
   },
   {
     id: "5",
     title: "EMEA Sales Dashboard",
     description:
       "Developed a comprehensive Power BI dashboard for real-time sales performance analysis across the EMEA region with customizable visualizations and filters for product and regional analysis.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "YOUR_PROJECT5_IMAGE_URL_HERE",
     tags: ["Power BI", "Data Visualization", "Business Analytics"],
-    githubUrl: "#",
+    githubUrl: "YOUR_PROJECT5_GITHUB_URL_HERE",
   },
   {
     id: "6",
     title: "Finance Pro Dashboard",
     description:
       "Created a real-time stock visualization and currency conversion dashboard for tracking prices, analyzing trends, and making informed financial decisions with an intuitive interface.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    image: "YOUR_PROJECT6_IMAGE_URL_HERE",
     tags: ["Financial Analysis", "Data Visualization", "Streamlit", "Python"],
-    githubUrl: "#",
-    demoUrl: "#",
+    githubUrl: "YOUR_PROJECT6_GITHUB_URL_HERE",
   },
 ];
 
@@ -246,49 +243,49 @@ export const certifications: CertificationType[] = [
     title: "IBM Data Science Professional Certificate",
     organization: "Coursera",
     date: "2023",
-    url: "#",
+    url: "YOUR_CERT1_URL_HERE",
   },
   {
     id: "cert2",
     title: "Introduction to TensorFlow for AI/ML/DL",
     organization: "Coursera",
     date: "2023",
-    url: "#",
+    url: "YOUR_CERT2_URL_HERE",
   },
   {
     id: "cert3",
     title: "Python for Everybody Specialization",
     organization: "Coursera",
     date: "2022",
-    url: "#",
+    url: "YOUR_CERT3_URL_HERE",
   },
   {
     id: "cert4",
     title: "Cloud Computing Basics",
     organization: "Coursera",
     date: "2022",
-    url: "#",
+    url: "YOUR_CERT4_URL_HERE",
   },
   {
     id: "cert5",
     title: "Problem Solving (Basic)",
     organization: "HackerRank",
     date: "2023",
-    url: "#",
+    url: "YOUR_CERT5_URL_HERE",
   },
   {
     id: "cert6",
     title: "SQL (Basic)",
     organization: "HackerRank",
     date: "2023",
-    url: "#",
+    url: "YOUR_CERT6_URL_HERE",
   },
   {
     id: "cert7",
     title: "Data Analytics & BI",
     organization: "DigiSkills.pk",
     date: "2022",
-    url: "#",
+    url: "YOUR_CERT7_URL_HERE",
   },
 ];
 
@@ -298,7 +295,7 @@ export const testimonials: TestimonialType[] = [
     name: "Sarah Johnson",
     title: "Marketing Director at TechCorp",
     quote: "Mujtaba delivered exceptional data analytics that transformed our marketing strategy. His ability to extract meaningful insights from complex datasets helped us increase conversion rates by 40%.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    avatar: "",  // Removed avatar URL
     rating: 5
   },
   {
@@ -306,7 +303,7 @@ export const testimonials: TestimonialType[] = [
     name: "Michael Chen",
     title: "CTO at InnovateSoft",
     quote: "Working with Mujtaba on our ML pipeline was a game-changer. His deep understanding of machine learning algorithms and attention to detail resulted in a prediction model with 92% accuracy.",
-    avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+    avatar: "",  // Removed avatar URL
     rating: 5
   },
   {
@@ -314,7 +311,7 @@ export const testimonials: TestimonialType[] = [
     name: "Priya Patel",
     title: "Data Science Lead at HealthTech",
     quote: "Mujtaba's expertise in NLP helped us develop a patient feedback analysis system that dramatically improved our service quality. His technical skills and communication made the project seamless.",
-    avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+    avatar: "",  // Removed avatar URL
     rating: 4
   },
   {
@@ -322,7 +319,7 @@ export const testimonials: TestimonialType[] = [
     name: "David Wilson",
     title: "CEO at RetailAnalytics",
     quote: "The custom dashboard Mujtaba created for our retail data visualization needs was brilliantly designed. His ability to translate complex requirements into an intuitive interface exceeded our expectations.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    avatar: "",  // Removed avatar URL
     rating: 5
   }
 ];
@@ -343,13 +340,13 @@ export const publications = [
     title: "Analyzing machine learning algorithms in predicting Ranikot swelling at different compaction pressures in presence of carbon supported TiO2 water based mud",
     publisher: "Springer",
     date: "Feb 19, 2025",
-    url: "#"
+    url: "YOUR_PUBLICATION1_URL_HERE"
   },
   {
     id: "pub2",
     title: "A Novel Technique in Determining Mud Cake Permeability in SiO2 Nanoparticles and KCl Salt Water Based Drilling Fluid using Deep Learning Algorithm",
     publisher: "International Journal of Petroleum Technology",
     date: "Oct 28, 2024",
-    url: "#"
+    url: "YOUR_PUBLICATION2_URL_HERE"
   }
 ];

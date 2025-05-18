@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Github, Linkedin, Mail, FileText, Download, ExternalLink, MapPin, Phone } from "lucide-react";
+import { FileText, Download, MapPin, Phone, Mail } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
                 <Button variant="outline" className="rounded-full h-10 w-10 p-0" aria-label="Download Resume">
                   <a 
-                    href="#" 
+                    href="YOUR_RESUME_URL_HERE" 
                     download="Mujtaba_Mateen_Resume.pdf"
                     className="flex items-center justify-center w-full h-full"
                     aria-label="Download Resume"
@@ -145,37 +145,6 @@ export default function Contact() {
                 </Button>
               </CardContent>
             </Card>
-
-            <div className="flex flex-wrap gap-4">
-              <Button variant="outline" size="icon" className="rounded-full" asChild>
-                <a 
-                  href="https://github.com" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub Profile"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full" asChild>
-                <a 
-                  href="https://linkedin.com/in/mujtaba-mateen" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="icon" className="rounded-full" asChild>
-                <a 
-                  href="mailto:mujtabamateen12@gmail.com"
-                  aria-label="Email"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
-              </Button>
-            </div>
           </div>
 
           <div className="lg:col-span-8">

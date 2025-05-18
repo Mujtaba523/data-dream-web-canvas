@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, MapPin, Languages } from "lucide-react";
+import { MapPin, Languages, Github, Linkedin, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function About() {
@@ -26,7 +26,7 @@ export default function About() {
             <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-primary p-2">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+                src="YOUR_PROFILE_IMAGE_URL_HERE"
                 alt="Mujtaba Mateen - Data Scientist & AI Developer"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -82,12 +82,36 @@ export default function About() {
               </Card>
             </div>
 
-            <Button className="flex items-center gap-2" asChild>
-              <a href="#" download>
-                <FileText className="w-5 h-5" />
-                Download Resume
-              </a>
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button variant="outline" size="icon" className="rounded-full" asChild>
+                <a 
+                  href="YOUR_GITHUB_URL_HERE" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" className="rounded-full" asChild>
+                <a 
+                  href="YOUR_LINKEDIN_URL_HERE" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" className="rounded-full" asChild>
+                <a 
+                  href="mailto:YOUR_EMAIL_HERE"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

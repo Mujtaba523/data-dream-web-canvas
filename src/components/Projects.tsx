@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 
 export default function Projects() {
   const [projectFilter, setProjectFilter] = useState<string | null>(null);
@@ -111,18 +111,6 @@ export default function Projects() {
                       <Github className="w-4 h-4" />
                     </a>
                   </Button>
-                  {project.demoUrl && (
-                    <Button variant="outline" size="icon" asChild>
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View live demo"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </CardFooter>
             </Card>
@@ -152,30 +140,16 @@ export default function Projects() {
               </div>
               <div className="space-y-4">
                 <p className="text-foreground/80">{currentProject.description}</p>
-                <div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
-                  <Button className="flex items-center gap-2" asChild>
-                    <a
-                      href={currentProject.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-5 h-5" />
-                      View Source
-                    </a>
-                  </Button>
-                  {currentProject.demoUrl && (
-                    <Button variant="outline" className="flex items-center gap-2" asChild>
-                      <a
-                        href={currentProject.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
-                </div>
+                <Button className="flex items-center gap-2" asChild>
+                  <a
+                    href={currentProject.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="w-5 h-5" />
+                    View Source
+                  </a>
+                </Button>
               </div>
             </DialogContent>
           )}
