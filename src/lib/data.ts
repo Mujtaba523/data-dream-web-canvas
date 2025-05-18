@@ -1,4 +1,3 @@
-
 export interface SkillType {
   name: string;
   percentage: number;
@@ -30,6 +29,15 @@ export interface CertificationType {
   organization: string;
   date: string;
   url: string;
+}
+
+export interface TestimonialType {
+  id: string;
+  name: string;
+  title: string;
+  quote: string;
+  avatar: string;
+  rating: number;
 }
 
 export const skills: SkillType[] = [
@@ -282,6 +290,41 @@ export const certifications: CertificationType[] = [
     date: "2022",
     url: "#",
   },
+];
+
+export const testimonials: TestimonialType[] = [
+  {
+    id: "1",
+    name: "Sarah Johnson",
+    title: "Marketing Director at TechCorp",
+    quote: "Mujtaba delivered exceptional data analytics that transformed our marketing strategy. His ability to extract meaningful insights from complex datasets helped us increase conversion rates by 40%.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    rating: 5
+  },
+  {
+    id: "2",
+    name: "Michael Chen",
+    title: "CTO at InnovateSoft",
+    quote: "Working with Mujtaba on our ML pipeline was a game-changer. His deep understanding of machine learning algorithms and attention to detail resulted in a prediction model with 92% accuracy.",
+    avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+    rating: 5
+  },
+  {
+    id: "3",
+    name: "Priya Patel",
+    title: "Data Science Lead at HealthTech",
+    quote: "Mujtaba's expertise in NLP helped us develop a patient feedback analysis system that dramatically improved our service quality. His technical skills and communication made the project seamless.",
+    avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+    rating: 4
+  },
+  {
+    id: "4",
+    name: "David Wilson",
+    title: "CEO at RetailAnalytics",
+    quote: "The custom dashboard Mujtaba created for our retail data visualization needs was brilliantly designed. His ability to translate complex requirements into an intuitive interface exceeded our expectations.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    rating: 5
+  }
 ];
 
 export const typingTexts = [
