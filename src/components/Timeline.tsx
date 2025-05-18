@@ -50,31 +50,38 @@ export default function Timeline() {
 
           {/* Experience tab content with improved readability */}
           <TabsContent value="experience" className="mt-0">
-            <div className="relative border-l-2 border-gradient-purple pl-8 ml-4 space-y-12">
+            <div className="relative border-l-2 border-primary/50 pl-8 ml-4 space-y-12">
               {experienceItems.map((item, index) => (
-                <div key={item.id} className="relative animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
+                <div 
+                  key={item.id} 
+                  className="relative animate-fade-in bg-card/60 rounded-lg p-6 shadow-lg border-l-4 border-primary hover:translate-x-1 transition-transform duration-300" 
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
                   {/* Timeline dot with icon */}
-                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center shadow-lg">
+                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center shadow-lg">
                     <Briefcase className="w-5 h-5 text-white" />
                   </div>
                   
-                  {/* Period badge */}
-                  <div className="mb-1 text-sm font-medium px-3 py-1 bg-primary/20 text-primary inline-block rounded-full">
-                    {item.period}
+                  {/* Company and Period in header */}
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
+                    {/* Job title */}
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    
+                    {/* Period badge */}
+                    <div className="text-sm font-medium px-3 py-1 bg-primary/20 text-primary inline-block rounded-full mt-2 md:mt-0">
+                      {item.period}
+                    </div>
                   </div>
                   
-                  {/* Job title */}
-                  <h3 className="text-xl font-bold mt-2 text-white">
-                    {item.title}
-                  </h3>
-                  
-                  {/* Organization */}
-                  <h4 className="text-lg text-primary flex items-center gap-1 mb-2">
-                    {item.organization}
+                  {/* Organization with icon */}
+                  <h4 className="text-lg text-primary/90 flex items-center gap-1 mb-3 font-medium">
+                    @ {item.organization}
                   </h4>
                   
                   {/* Description with improved contrast */}
-                  <p className="text-foreground pl-2 border-l-2 border-primary/30 bg-secondary/40 p-3 rounded">
+                  <p className="text-foreground/90 bg-card/80 p-4 rounded-md border border-border/40">
                     {item.description}
                   </p>
                 </div>
@@ -84,31 +91,38 @@ export default function Timeline() {
 
           {/* Education tab content with improved readability */}
           <TabsContent value="education" className="mt-0">
-            <div className="relative border-l-2 border-gradient-blue pl-8 ml-4 space-y-12">
+            <div className="relative border-l-2 border-blue-500/50 pl-8 ml-4 space-y-12">
               {educationItems.map((item, index) => (
-                <div key={item.id} className="relative animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
+                <div 
+                  key={item.id} 
+                  className="relative animate-fade-in bg-card/60 rounded-lg p-6 shadow-lg border-l-4 border-blue-500 hover:translate-x-1 transition-transform duration-300" 
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
                   {/* Timeline dot with icon */}
-                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-primary flex items-center justify-center shadow-lg">
+                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg">
                     <GraduationCap className="w-5 h-5 text-white" />
                   </div>
                   
-                  {/* Period badge */}
-                  <div className="mb-1 text-sm font-medium px-3 py-1 bg-blue-500/20 text-blue-400 inline-block rounded-full">
-                    {item.period}
+                  {/* Degree and Period in header */}
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
+                    {/* Degree/course title */}
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    
+                    {/* Period badge */}
+                    <div className="text-sm font-medium px-3 py-1 bg-blue-500/20 text-blue-400 inline-block rounded-full mt-2 md:mt-0">
+                      {item.period}
+                    </div>
                   </div>
                   
-                  {/* Degree/course title */}
-                  <h3 className="text-xl font-bold mt-2 text-white">
-                    {item.title}
-                  </h3>
-                  
-                  {/* Institution */}
-                  <h4 className="text-lg text-blue-400 flex items-center gap-1 mb-2">
-                    {item.organization}
+                  {/* Institution with icon */}
+                  <h4 className="text-lg text-blue-400 flex items-center gap-1 mb-3 font-medium">
+                    @ {item.organization}
                   </h4>
                   
                   {/* Description with improved contrast */}
-                  <p className="text-foreground pl-2 border-l-2 border-blue-500/30 bg-secondary/40 p-3 rounded">
+                  <p className="text-foreground/90 bg-card/80 p-4 rounded-md border border-border/40">
                     {item.description}
                   </p>
                 </div>
