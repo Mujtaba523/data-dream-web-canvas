@@ -69,7 +69,7 @@ export default function Skills() {
               </TabsTrigger>
               <TabsTrigger value="tools" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
                 <Terminal className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span>Tools</span>
+                <span>Tools/Platforms</span>
               </TabsTrigger>
             </TabsList>
           </div>
