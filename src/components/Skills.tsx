@@ -42,47 +42,49 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-secondary/30 relative section-padding">
+    <section id="skills" className="py-12 md:py-16 lg:py-20 bg-secondary/30 relative section-padding overflow-hidden">
       {/* Top divider */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180 z-0">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[30px] md:h-[40px] w-full">
           <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-background"></path>
         </svg>
       </div>
 
-      <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-2">
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-2">
           Technical <span className="text-gradient">Skills</span>
         </h2>
-        <div className="h-1 w-20 bg-primary mb-12"></div>
+        <div className="h-1 w-20 bg-primary mb-8"></div>
 
         <Tabs defaultValue="programming" className="w-full">
-          <TabsList className="mb-8 w-full justify-start overflow-x-auto">
-            <TabsTrigger value="programming" className="flex items-center gap-2">
-              <Code className="w-4 h-4" />
-              <span>Programming Languages</span>
-            </TabsTrigger>
-            <TabsTrigger value="mlai" className="flex items-center gap-2">
-              <Database className="w-4 h-4" />
-              <span>ML/AI & Data</span>
-            </TabsTrigger>
-            <TabsTrigger value="tools" className="flex items-center gap-2">
-              <Terminal className="w-4 h-4" />
-              <span>Tools & Platforms</span>
-            </TabsTrigger>
-          </TabsList>
+          <div className="w-full overflow-x-auto pb-2 no-scrollbar">
+            <TabsList className="mb-6 w-full justify-start inline-flex whitespace-nowrap min-w-max">
+              <TabsTrigger value="programming" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
+                <Code className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span>Programming Languages</span>
+              </TabsTrigger>
+              <TabsTrigger value="mlai" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
+                <Database className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span>ML/AI & Data</span>
+              </TabsTrigger>
+              <TabsTrigger value="tools" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
+                <Terminal className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span>Tools & Platforms</span>
+              </TabsTrigger>
+            </TabsList>
+          </div>
           
           <div ref={skillsRef}>
             <TabsContent value="programming" className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {programmingSkills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
+                  <div key={skill.name} className="space-y-1.5">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium flex items-center">
-                        <Code className="w-4 h-4 mr-2 text-primary" />
+                      <span className="font-medium flex items-center text-xs sm:text-sm">
+                        <Code className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-primary" />
                         {skill.name}
                       </span>
-                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs">
                         {getSkillLevel(skill.percentage)}
                       </Badge>
                     </div>
@@ -98,7 +100,7 @@ export default function Skills() {
                           return (
                             <div 
                               key={level} 
-                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              className={`h-1.5 sm:h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
                               style={{ 
                                 transitionDelay: `${index * 100 + level * 100}ms`,
                               }}
@@ -113,15 +115,15 @@ export default function Skills() {
             </TabsContent>
             
             <TabsContent value="mlai" className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {mlaiSkills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
+                  <div key={skill.name} className="space-y-1.5">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium flex items-center">
-                        <Database className="w-4 h-4 mr-2 text-primary" />
+                      <span className="font-medium flex items-center text-xs sm:text-sm">
+                        <Database className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-primary" />
                         {skill.name}
                       </span>
-                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs">
                         {getSkillLevel(skill.percentage)}
                       </Badge>
                     </div>
@@ -137,7 +139,7 @@ export default function Skills() {
                           return (
                             <div 
                               key={level} 
-                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              className={`h-1.5 sm:h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
                               style={{ 
                                 transitionDelay: `${index * 100 + level * 100}ms`,
                               }}
@@ -152,15 +154,15 @@ export default function Skills() {
             </TabsContent>
             
             <TabsContent value="tools" className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {toolsSkills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
+                  <div key={skill.name} className="space-y-1.5">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium flex items-center">
-                        <Terminal className="w-4 h-4 mr-2 text-primary" />
+                      <span className="font-medium flex items-center text-xs sm:text-sm">
+                        <Terminal className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 text-primary" />
                         {skill.name}
                       </span>
-                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+                      <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs">
                         {getSkillLevel(skill.percentage)}
                       </Badge>
                     </div>
@@ -176,7 +178,7 @@ export default function Skills() {
                           return (
                             <div 
                               key={level} 
-                              className={`h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
+                              className={`h-1.5 sm:h-2 rounded-full flex-1 transition-all duration-700 ${shouldFill ? 'bg-primary' : 'bg-secondary'} ${isVisible && shouldFill ? 'opacity-100' : 'opacity-30'}`}
                               style={{ 
                                 transitionDelay: `${index * 100 + level * 100}ms`,
                               }}
@@ -194,8 +196,8 @@ export default function Skills() {
       </div>
 
       {/* Bottom divider */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[30px] md:h-[40px] w-full">
           <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-background"></path>
         </svg>
       </div>

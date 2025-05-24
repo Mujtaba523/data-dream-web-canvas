@@ -23,11 +23,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       {/* Navigation Bar - fixed at top */}
       <NavBar />
       
-      <main className="overflow-hidden">
+      <main>
         {/* Hero Section - first visible section */}
         <Hero />
         
@@ -41,9 +41,7 @@ const Index = () => {
         <Projects />
         
         {/* Timeline Section - experience and education */}
-        <ScrollArea className="w-full">
-          <Timeline />
-        </ScrollArea>
+        <Timeline />
         
         {/* Publications Section - academic/professional papers */}
         <Publications />
@@ -55,12 +53,12 @@ const Index = () => {
         <Contact />
         
         {/* Footer - copyright and attribution */}
-        <footer className="py-4 md:py-6 border-t border-border">
-          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-foreground/60 text-xs px-4">
+        <footer className="py-3 sm:py-4 border-t border-border">
+          <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-foreground/60 text-xs px-4">
             <p>&copy; {new Date().getFullYear()} Mujtaba Mateen. All rights reserved.</p>
-            <div className="mt-2 md:mt-0 flex gap-4">
+            <div className="mt-2 sm:mt-0 flex gap-3 sm:gap-4">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <Separator orientation="vertical" className="hidden md:block" />
+              <Separator orientation="vertical" className="hidden sm:block" />
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
             </div>
           </div>

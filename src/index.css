@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -99,6 +100,18 @@
   /* Better buttons on mobile */
   button, .btn {
     @apply cursor-pointer touch-manipulation;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }
 
@@ -241,6 +254,12 @@ img {
   .section-title {
     @apply text-xl sm:text-2xl md:text-3xl;
   }
+  
+  /* Adjust divider heights for smaller screens */
+  .absolute.top-0 svg,
+  .absolute.bottom-0 svg {
+    height: 30px;
+  }
 }
 
 /* Better scrolling experience */
@@ -297,11 +316,5 @@ img {
 
 /* Better pagination on mobile */
 .pagination-container {
-  @apply overflow-x-auto py-2;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.pagination-container::-webkit-scrollbar {
-  display: none;
+  @apply overflow-x-auto py-2 no-scrollbar;
 }
