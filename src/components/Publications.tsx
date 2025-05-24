@@ -15,7 +15,7 @@ export default function Publications() {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <h2 className="text-lg md:text-xl lg:text-2xl font-bold font-heading mb-2">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-2">
           Research <span className="text-gradient">Publications</span>
         </h2>
         <div className="h-1 w-20 bg-primary mb-6 md:mb-8"></div>
