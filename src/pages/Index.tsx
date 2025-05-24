@@ -9,7 +9,6 @@ import Publications from "@/components/Publications";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import { useEffect } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
 /**
@@ -23,11 +22,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Navigation Bar - fixed at top */}
       <NavBar />
       
-      <main>
+      <main className="relative">
         {/* Hero Section - first visible section */}
         <Hero />
         
@@ -53,7 +52,7 @@ const Index = () => {
         <Contact />
         
         {/* Footer - copyright and attribution */}
-        <footer className="py-3 sm:py-4 border-t border-border">
+        <footer className="py-4 md:py-6 border-t border-border">
           <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-foreground/60 text-xs px-4">
             <p>&copy; {new Date().getFullYear()} Mujtaba Mateen. All rights reserved.</p>
             <div className="mt-2 sm:mt-0 flex gap-3 sm:gap-4">
@@ -66,6 +65,6 @@ const Index = () => {
       </main>
     </div>
   );
-};
+}
 
 export default Index;

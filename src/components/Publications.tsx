@@ -15,10 +15,10 @@ export default function Publications() {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-2">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold font-heading mb-2">
           Research <span className="text-gradient">Publications</span>
         </h2>
-        <div className="h-1 w-20 bg-primary mb-8 md:mb-12"></div>
+        <div className="h-1 w-20 bg-primary mb-6 md:mb-8"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
           {publications.map((pub) => (
@@ -28,25 +28,28 @@ export default function Publications() {
             >
               <CardContent className="p-4 md:p-5">
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-primary/20 rounded-full text-primary hidden sm:flex">
+                  <div className="p-2 bg-primary/20 rounded-full text-primary hidden sm:flex shrink-0">
                     <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <Badge variant="secondary" className="mb-2">
+                  <div className="w-full">
+                    <Badge variant="secondary" className="mb-2 inline-flex">
                       {pub.date}
                     </Badge>
-                    <h3 className="text-sm sm:text-base font-bold mb-1.5">{pub.title}</h3>
-                    <div className="flex items-center text-xs sm:text-sm text-foreground/70 mb-3">
-                      <BookOpen className="w-3 h-3 mr-1 sm:hidden" />
-                      <span>Published in: {pub.publisher}</span>
+                    <h3 className="text-sm sm:text-base font-bold mb-1.5 break-words hyphens-auto">
+                      {pub.title}
+                    </h3>
+                    <div className="flex items-center text-xs sm:text-sm text-foreground/70 mb-3 break-words">
+                      <BookOpen className="w-3 h-3 mr-1 sm:hidden shrink-0" />
+                      <span className="line-clamp-2">Published in: {pub.publisher}</span>
                     </div>
                     <a 
                       href={pub.url} 
-                      className="inline-flex items-center text-xs sm:text-sm text-primary hover:underline" 
+                      className="inline-flex items-center text-xs sm:text-sm text-primary hover:underline hover:text-primary/80 transition-colors group py-1" 
                       target="_blank"
                       rel="noreferrer"
                     >
-                      View Publication <ExternalLink className="ml-1 w-3 h-3" />
+                      <span>View Publication</span> 
+                      <ExternalLink className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                     </a>
                   </div>
                 </div>
