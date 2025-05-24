@@ -160,7 +160,7 @@ export const certifications = [
 export const testimonials = [
   {
     id: "testimonial1",
-    quote: "Excellent job! Working with Mujtaba was a real pleasure. He is a great communicator, extremely knowledgeable, very responsible, hardworking, and responds promptly. Mujtaba is a very talented person, and the job he did was thorough and complete. I would definitely recommend working with Mujtaba.",
+    quote: "Excellent job! Working with Mujtaba was a real pleasure. He is a great communicator, extremely knowledgeable, very responsible, hardworking, and responds promptly. I would definitely recommend working with Mujtaba.",
     name: "Teg Keene",
     title: "Project: Excel Data Extraction & Cleaning"
   },
