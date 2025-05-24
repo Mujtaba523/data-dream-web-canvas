@@ -213,7 +213,7 @@ export const projects = [
     id: "project1",
     title: "Deep Learning Based Voice Cloning for Urdu Language (Final Year Project)",
     description: "Fine-tuned an X-TTS voice cloning model on 10+ hours of recorded speech data. Achieved a Mean Opinion Score (MOS) of 3.14, indicating realistic and intelligible voice output. Focused on high-quality speech synthesis for personalized voice replication.",
-    tags: ["Machine Learning", "Audio Processing", "Large Language Model", "Pytorch"],
+    tags: ["Machine Learning", "Audio Processing", "Deep Learning", "Pytorch"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT1,
     githubUrl: "https://github.com/Mujtaba523/Urdu-Voice-Cloning",
     demoUrl: "#" // Placeholder for demo URL
@@ -222,7 +222,7 @@ export const projects = [
     id: "project2",
     title: "Deep Learning Based Interviewing Expert System with Knowledge Base",
     description: "NLP-driven expert system that dynamically asks and scores technical interview answers using keyword similarity and trained models. Achieved 85% scoring accuracy.",
-    tags: ["NLP", "Python", "Deep Learning", "Tensorflow"],
+    tags: ["NLP", "LLM", "Deep Learning", "TensorFlow"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT2,
     githubUrl: "https://github.com/MuneebUllahKhan222/Recruitment.ai",
     demoUrl: "#" // Placeholder for demo URL
@@ -231,7 +231,7 @@ export const projects = [
     id: "project3",
     title: "Alzheimer's Detection via MRI Scans",
     description: "Developed a CNN model using TensorFlow and Keras to classify Alzheimer's from MRI images. Deployed as an interactive web application using Streamlit.",
-    tags: ["CNN", "Medical Imaging", "TensorFlow", "Streamlit"],
+    tags: ["CNN", "Deep Learning", "TensorFlow", "Streamlit"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT3,
     githubUrl: "https://github.com/Mujtaba523/Alzheimer-sDiseaseClassifier",
     demoUrl: "#"
@@ -258,7 +258,7 @@ export const projects = [
     id: "project6",
     title: "EMEA Sales Dashboard",
     description: "Designed a Power BI dashboard to visualize real-time sales performance across the EMEA region with interactive filters and KPI-based visualizations.",
-    tags: ["Power BI", "Sales Analytics", "Dashboard", "Visualization"],
+    tags: ["Power BI", "Data Analytics", "Dashboard", "Visualization"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT6,
     githubUrl: "https://github.com/Mujtaba523/EMEA-Dashboard",
     demoUrl: "#"
@@ -267,7 +267,7 @@ export const projects = [
     id: "project7",
     title: "Maven Analytics Space Challenge",
     description: "Created a detailed Power BI dashboard analyzing unicorn companies by revenue, market share, and user growth with drill-down and filtering features.",
-    tags: ["Power BI", "Business Intelligence", "Dashboard"],
+    tags: ["Power BI", "Data Analytics", "Dashboard"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT7,
     githubUrl: "https://github.com/Mujtaba523/MavenAnalyticsSpaceChallenge",
     demoUrl: "#"
@@ -276,7 +276,7 @@ export const projects = [
     id: "project8",
     title: "Finance Pro – Stock and Currency Dashboard",
     description: "Built a financial dashboard for real-time stock visualization and currency conversion using APIs. Integrated with Streamlit for user interaction.",
-    tags: ["Finance", "APIs", "Streamlit", "Dashboard"],
+    tags: ["Data Analytics", "APIs", "Streamlit", "Dashboard"],
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT8,
     githubUrl: "https://github.com/Mujtaba523/Finance-Pro",
     demoUrl: "#"
