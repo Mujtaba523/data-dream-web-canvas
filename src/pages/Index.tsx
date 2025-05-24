@@ -9,6 +9,8 @@ import Publications from "@/components/Publications";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import { useEffect } from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 
 /**
  * Main landing page component
@@ -25,7 +27,7 @@ const Index = () => {
       {/* Navigation Bar - fixed at top */}
       <NavBar />
       
-      <main className="overflow-x-hidden">
+      <main className="overflow-hidden">
         {/* Hero Section - first visible section */}
         <Hero />
         
@@ -39,7 +41,9 @@ const Index = () => {
         <Projects />
         
         {/* Timeline Section - experience and education */}
-        <Timeline />
+        <ScrollArea className="w-full">
+          <Timeline />
+        </ScrollArea>
         
         {/* Publications Section - academic/professional papers */}
         <Publications />
@@ -52,8 +56,13 @@ const Index = () => {
         
         {/* Footer - copyright and attribution */}
         <footer className="py-4 md:py-6 border-t border-border">
-          <div className="container mx-auto text-center text-foreground/60 text-xs md:text-sm px-4">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-foreground/60 text-xs px-4">
             <p>&copy; {new Date().getFullYear()} Mujtaba Mateen. All rights reserved.</p>
+            <div className="mt-2 md:mt-0 flex gap-4">
+              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <Separator orientation="vertical" className="hidden md:block" />
+              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            </div>
           </div>
         </footer>
       </main>
