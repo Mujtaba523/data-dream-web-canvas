@@ -61,15 +61,15 @@ export default function Skills() {
             <TabsList className="mb-6 w-full justify-start inline-flex whitespace-nowrap min-w-max">
               <TabsTrigger value="programming" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
                 <Code className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span>Programming Languages</span>
+                <span>Languages</span>
               </TabsTrigger>
               <TabsTrigger value="mlai" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
                 <Database className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span>ML/AI & Data</span>
+                <span>Frameworks</span>
               </TabsTrigger>
               <TabsTrigger value="tools" className="text-xs sm:text-sm flex items-center gap-1 px-2 sm:px-3">
                 <Terminal className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span>Tools & Platforms</span>
+                <span>Tools</span>
               </TabsTrigger>
             </TabsList>
           </div>
