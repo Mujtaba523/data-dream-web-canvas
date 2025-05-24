@@ -70,7 +70,7 @@ export default function Projects() {
       </div>
       
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading mb-2">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading mb-2">
           Featured <span className="text-gradient">Projects</span>
         </h2>
         <div className="h-1 w-20 bg-primary mb-8 md:mb-12"></div>
