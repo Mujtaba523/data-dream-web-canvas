@@ -16,33 +16,33 @@ export default function Timeline() {
   const experienceItems = timelineItems.filter((item) => item.type === "experience");
 
   return (
-    <section id="experience" className="py-20 bg-secondary/30 section-padding relative">
+    <section id="experience" className="py-16 md:py-20 bg-secondary/30 section-padding relative">
       {/* Top divider - zigzag pattern */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[40px] md:h-[60px] w-full">
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" className="fill-background"></path>
         </svg>
       </div>
 
       <div className="container mx-auto max-w-7xl">
         {/* Section title */}
-        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-2">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading mb-2">
           Experience & <span className="text-gradient">Education</span>
         </h2>
-        <div className="h-1 w-20 bg-primary mb-12"></div>
+        <div className="h-1 w-20 bg-primary mb-8 md:mb-12"></div>
 
         {/* Tabbed interface for experience, education, and certifications */}
         <Tabs defaultValue="experience" className="w-full">
-          <TabsList className="mb-8 w-full justify-start overflow-x-auto">
-            <TabsTrigger value="experience" className="flex items-center gap-2">
+          <TabsList className="mb-6 md:mb-8 w-full justify-start overflow-x-auto flex-wrap">
+            <TabsTrigger value="experience" className="flex items-center gap-2 text-sm md:text-base">
               <Briefcase className="w-4 h-4" />
               <span>Work Experience</span>
             </TabsTrigger>
-            <TabsTrigger value="education" className="flex items-center gap-2">
+            <TabsTrigger value="education" className="flex items-center gap-2 text-sm md:text-base">
               <GraduationCap className="w-4 h-4" />
               <span>Education</span>
             </TabsTrigger>
-            <TabsTrigger value="certifications" className="flex items-center gap-2">
+            <TabsTrigger value="certifications" className="flex items-center gap-2 text-sm md:text-base">
               <Award className="w-4 h-4" />
               <span>Certifications</span>
             </TabsTrigger>
@@ -50,101 +50,109 @@ export default function Timeline() {
 
           {/* Experience tab content with improved readability */}
           <TabsContent value="experience" className="mt-0">
-            <div className="relative border-l-2 border-primary/50 pl-8 ml-4 space-y-12">
+            <div className="space-y-6 md:space-y-8">
               {experienceItems.map((item, index) => (
-                <div 
+                <Card 
                   key={item.id} 
-                  className="relative animate-fade-in bg-card/60 rounded-lg p-6 shadow-lg border-l-4 border-primary hover:translate-x-1 transition-transform duration-300" 
+                  className="relative animate-fade-in bg-card/60 border-l-4 border-primary hover:shadow-lg transition-all duration-300"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  {/* Timeline dot with icon */}
-                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center shadow-lg">
-                    <Briefcase className="w-5 h-5 text-white" />
-                  </div>
-                  
-                  {/* Company and Period in header */}
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
-                    {/* Job title */}
-                    <h3 className="text-xl font-bold text-white">
-                      {item.title}
-                    </h3>
-                    
-                    {/* Period badge */}
-                    <div className="text-sm font-medium px-3 py-1 bg-primary/20 text-primary inline-block rounded-full mt-2 md:mt-0">
-                      {item.period}
+                  <CardContent className="p-4 md:p-6 md:pl-8">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-700 flex-shrink-0">
+                        <Briefcase className="w-5 h-5 text-white" />
+                      </div>
+                      
+                      <div className="w-full">
+                        {/* Header with job title and period */}
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                          <h3 className="text-lg md:text-xl font-bold text-white">
+                            {item.title}
+                          </h3>
+                          
+                          <Badge className="text-xs md:text-sm font-medium px-2 py-1 bg-primary/20 text-primary inline-block rounded-full w-max">
+                            {item.period}
+                          </Badge>
+                        </div>
+                        
+                        {/* Organization */}
+                        <h4 className="text-base md:text-lg text-primary/90 flex items-center gap-1 mb-3 font-medium">
+                          <Briefcase className="inline w-4 h-4 md:hidden mr-1" />
+                          @ {item.organization}
+                        </h4>
+                        
+                        {/* Description with improved contrast */}
+                        <div className="text-sm md:text-base text-foreground/90 bg-card/80 p-3 md:p-4 rounded-md border border-border/40">
+                          {item.description}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Organization with icon */}
-                  <h4 className="text-lg text-primary/90 flex items-center gap-1 mb-3 font-medium">
-                    @ {item.organization}
-                  </h4>
-                  
-                  {/* Description with improved contrast */}
-                  <p className="text-foreground/90 bg-card/80 p-4 rounded-md border border-border/40">
-                    {item.description}
-                  </p>
-                </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </TabsContent>
 
           {/* Education tab content with improved readability */}
           <TabsContent value="education" className="mt-0">
-            <div className="relative border-l-2 border-blue-500/50 pl-8 ml-4 space-y-12">
+            <div className="space-y-6 md:space-y-8">
               {educationItems.map((item, index) => (
-                <div 
+                <Card 
                   key={item.id} 
-                  className="relative animate-fade-in bg-card/60 rounded-lg p-6 shadow-lg border-l-4 border-blue-500 hover:translate-x-1 transition-transform duration-300" 
+                  className="relative animate-fade-in bg-card/60 border-l-4 border-blue-500 hover:shadow-lg transition-all duration-300"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  {/* Timeline dot with icon */}
-                  <div className="absolute -left-[48px] -top-1 w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg">
-                    <GraduationCap className="w-5 h-5 text-white" />
-                  </div>
-                  
-                  {/* Degree and Period in header */}
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
-                    {/* Degree/course title */}
-                    <h3 className="text-xl font-bold text-white">
-                      {item.title}
-                    </h3>
-                    
-                    {/* Period badge */}
-                    <div className="text-sm font-medium px-3 py-1 bg-blue-500/20 text-blue-400 inline-block rounded-full mt-2 md:mt-0">
-                      {item.period}
+                  <CardContent className="p-4 md:p-6 md:pl-8">
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex-shrink-0">
+                        <GraduationCap className="w-5 h-5 text-white" />
+                      </div>
+                      
+                      <div className="w-full">
+                        {/* Degree and Period in header */}
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                          <h3 className="text-lg md:text-xl font-bold text-white">
+                            {item.title}
+                          </h3>
+                          
+                          <Badge className="text-xs md:text-sm font-medium px-2 py-1 bg-blue-500/20 text-blue-400 inline-block rounded-full w-max">
+                            {item.period}
+                          </Badge>
+                        </div>
+                        
+                        {/* Institution with icon */}
+                        <h4 className="text-base md:text-lg text-blue-400 flex items-center gap-1 mb-3 font-medium">
+                          <GraduationCap className="inline w-4 h-4 md:hidden mr-1" />
+                          @ {item.organization}
+                        </h4>
+                        
+                        {/* Description with improved contrast */}
+                        <div className="text-sm md:text-base text-foreground/90 bg-card/80 p-3 md:p-4 rounded-md border border-border/40">
+                          {item.description}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Institution with icon */}
-                  <h4 className="text-lg text-blue-400 flex items-center gap-1 mb-3 font-medium">
-                    @ {item.organization}
-                  </h4>
-                  
-                  {/* Description with improved contrast */}
-                  <p className="text-foreground/90 bg-card/80 p-4 rounded-md border border-border/40">
-                    {item.description}
-                  </p>
-                </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </TabsContent>
 
           {/* Certifications tab content */}
           <TabsContent value="certifications" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {certifications.map((cert) => (
-                <Card key={cert.id} className="bg-card/50 backdrop-blur-sm border-t-4 border-t-primary/70 card-hover animate-fade-in">
-                  <CardContent className="p-6">
-                    <Badge variant="secondary" className="mb-3 flex items-center gap-1">
+                <Card key={cert.id} className="bg-card/50 backdrop-blur-sm border-t-4 border-t-primary/70 card-hover animate-fade-in h-full">
+                  <CardContent className="p-4 md:p-6">
+                    <Badge variant="secondary" className="mb-3 flex items-center gap-1 text-xs">
                       <Award className="w-3 h-3" />
                       {cert.date}
                     </Badge>
-                    <h3 className="text-lg font-bold mb-1">{cert.title}</h3>
-                    <div className="text-sm text-foreground/70 mb-4">{cert.organization}</div>
+                    <h3 className="text-base md:text-lg font-bold mb-1">{cert.title}</h3>
+                    <div className="text-xs md:text-sm text-foreground/70 mb-4">{cert.organization}</div>
                     <a 
-                      href={cert.url} // PLACEHOLDER: Replace with actual certification URL
-                      className="inline-flex items-center text-sm text-primary hover:underline" 
+                      href={cert.url}
+                      className="inline-flex items-center text-xs md:text-sm text-primary hover:underline mt-auto" 
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -160,7 +168,7 @@ export default function Timeline() {
 
       {/* Bottom divider - tilt */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[60px] w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block h-[40px] md:h-[60px] w-full">
           <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="fill-background"></path>
         </svg>
       </div>

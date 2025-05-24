@@ -25,7 +25,7 @@ const Index = () => {
       {/* Navigation Bar - fixed at top */}
       <NavBar />
       
-      <main>
+      <main className="overflow-x-hidden">
         {/* Hero Section - first visible section */}
         <Hero />
         
@@ -51,8 +51,8 @@ const Index = () => {
         <Contact />
         
         {/* Footer - copyright and attribution */}
-        <footer className="py-6 border-t border-border">
-          <div className="container mx-auto text-center text-foreground/60 text-sm">
+        <footer className="py-4 md:py-6 border-t border-border">
+          <div className="container mx-auto text-center text-foreground/60 text-xs md:text-sm px-4">
             <p>&copy; {new Date().getFullYear()} Mujtaba Mateen. All rights reserved.</p>
           </div>
         </footer>

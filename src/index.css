@@ -76,13 +76,28 @@
   
   body {
     @apply bg-background text-foreground overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Add padding for fixed header */
+  }
+
+  /* Improve mobile form elements */
+  input, textarea, select, button {
+    @apply font-sans text-base;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* Better buttons on mobile */
+  button, .btn {
+    @apply cursor-pointer touch-manipulation;
   }
 }
 
+/* Base text sizes */
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-400 to-primary;
 }
@@ -92,7 +107,7 @@
 }
 
 .section-padding {
-  @apply py-20 px-6 md:px-12 lg:px-24;
+  @apply py-12 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8 lg:px-12 xl:px-16;
 }
 
 /* Animated particle background */
@@ -124,6 +139,12 @@
   @apply relative overflow-hidden border-r-4 border-foreground whitespace-nowrap;
   animation: typewriter 4s steps(44) 1s 1 normal both,
              blink 1s steps(44) infinite normal;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Animations */
@@ -196,6 +217,24 @@
   animation: blink 1s step-end infinite;
 }
 
+/* Media queries for better responsiveness */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-10 px-4;
+  }
+  
+  h1, h2, h3 {
+    hyphens: auto;
+  }
+}
+
+/* Fix for mobile safari */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
 /* Custom border gradients */
 .border-gradient-purple {
   background: linear-gradient(to bottom, rgba(139, 92, 246, 0.5), rgba(139, 92, 246, 0.1));
@@ -203,4 +242,15 @@
 
 .border-gradient-blue {
   background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.1));
+}
+
+/* Improved mobile touch targets */
+@media (max-width: 768px) {
+  .btn, button, a {
+    @apply min-h-9 min-w-9;
+  }
+  
+  nav a, .btn-lg {
+    @apply min-h-10;
+  }
 }

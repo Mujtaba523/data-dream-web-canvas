@@ -9,6 +9,8 @@ const NAV_ITEMS = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Publications", href: "#publications" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -50,13 +52,13 @@ export default function NavBar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-md py-2"
+          ? "bg-background/90 backdrop-blur-md shadow-md py-2"
           : "bg-transparent py-4"
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
         {/* Site logo/name */}
-        <a href="#home" className="text-2xl font-bold text-gradient">
+        <a href="#home" className="text-xl md:text-2xl font-bold text-gradient">
           Mujtaba Mateen
         </a>
 
@@ -93,7 +95,7 @@ export default function NavBar() {
 
         {/* Desktop navigation */}
         {!isMobile && (
-          <nav className="flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
@@ -115,7 +117,7 @@ export default function NavBar() {
 
         {/* Mobile navigation */}
         {isMobile && isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-lg shadow-lg p-4 flex flex-col gap-2 transition-all duration-300">
+          <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-lg shadow-lg p-4 flex flex-col gap-2 transition-all duration-300 max-h-[80vh] overflow-y-auto">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}

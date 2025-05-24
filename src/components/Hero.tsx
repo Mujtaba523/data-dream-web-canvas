@@ -30,7 +30,7 @@ export default function Hero() {
         if (window.particlesJS) {
           window.particlesJS("particles-js", {
             particles: {
-              number: { value: 100, density: { enable: true, value_area: 800 } },
+              number: { value: 60, density: { enable: true, value_area: 800 } },
               color: { value: "#8b5cf6" },
               shape: {
                 type: "circle",
@@ -55,7 +55,7 @@ export default function Hero() {
               },
               move: {
                 enable: true,
-                speed: 3,
+                speed: 2, // reduced speed for mobile
                 direction: "none",
                 random: true,
                 straight: false,
@@ -111,21 +111,21 @@ export default function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-background section-padding"
+      className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-background section-padding pt-20"
     >
       <div id="particles-js" className="absolute inset-0 z-0" aria-hidden="true"></div>
       
-      <div className="container mx-auto z-10 flex flex-col gap-6 max-w-4xl text-center">
+      <div className="container mx-auto z-10 flex flex-col gap-4 md:gap-6 max-w-4xl text-center px-4">
         <p className="text-primary font-medium">Hello, I'm</p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading">
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold font-heading">
           Mujtaba Mateen
         </h1>
-        <h2 className="text-2xl md:text-3xl text-foreground/80 mb-4">
+        <h2 className="text-xl md:text-2xl lg:text-3xl text-foreground/80 mb-2 md:mb-4">
           Data Scientist & AI Developer
         </h2>
         
-        <div className="h-12">
-          <p className="text-lg md:text-xl lg:text-2xl font-medium inline-block">
+        <div className="h-12 mb-2">
+          <p className="text-base md:text-xl lg:text-2xl font-medium inline-block">
             I'm a{" "}
             <span className="text-primary font-semibold h-8 inline-block">
               {text}
@@ -134,10 +134,10 @@ export default function Hero() {
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-4 md:mt-6">
           <Button 
             size="lg" 
-            className="px-8 py-6"
+            className="px-6 md:px-8 py-5 md:py-6 text-sm md:text-base"
             asChild
           >
             <a href="#projects">View Projects</a>
@@ -145,7 +145,7 @@ export default function Hero() {
           <Button 
             variant="outline" 
             size="lg"
-            className="px-8 py-6"
+            className="px-6 md:px-8 py-5 md:py-6 text-sm md:text-base"
             asChild
           >
             <a href="#contact">Contact Me</a>
@@ -155,10 +155,10 @@ export default function Hero() {
 
       <a 
         href="#about"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center text-sm gap-2 text-foreground/70 hover:text-foreground transition-colors"
+        className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center text-xs md:text-sm gap-1 md:gap-2 text-foreground/70 hover:text-foreground transition-colors"
       >
         <span>Scroll Down</span>
-        <ArrowDown className="animate-bounce" size={20} />
+        <ArrowDown className="animate-bounce" size={16} />
       </a>
     </section>
   );
