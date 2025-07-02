@@ -142,7 +142,7 @@ export default function Contact() {
                 </div>
                 <Button variant="outline" size="sm" className="rounded-full h-8 w-8 md:h-10 md:w-10 p-0 flex-shrink-0" aria-label="Download Resume">
                   <a 
-                    href="data-dream-web-canvas\Mujtaba's Updated Resume-II.pdf" 
+                    href="https://drive.google.com/file/d/1Jr7RWv3k0eT1afdEDbpvWhz-d7PO1tiP/view?usp=sharing" 
                     download="Mujtaba_Mateen_Resume.pdf"
                     className="flex items-center justify-center w-full h-full"
                     aria-label="Download Resume"
