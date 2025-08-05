@@ -45,7 +45,7 @@ export const timelineItems = [
   {
     id: "exp1",
     type: "experience",
-    period: "Aug 2024 – Present",
+    period: "Aug 2024 – June 2025",
     title: "GTP Officer - IT Enterprise Architecture & SQA",
     organization: "1LINK (Pvt) Ltd",
     description: "Coordinated functional and UAT testing for Bill Payment System and IBFT according to 1LINK standards. Automated test scripts, improved test environments, and cut project timelines from 1 week to 2 days.",
