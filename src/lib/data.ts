@@ -204,7 +204,8 @@ export const skills = [
   { name: "Tableau/MS PowerBI", percentage: 85, category: "tools" },
   { name: "MS Excel", percentage: 80, category: "tools" },
   { name: "MySQL Server", percentage: 85, category: "tools" },
-  { name: "Oracle SQL Server", percentage: 80, category: "tools" }
+  { name: "Oracle SQL Server", percentage: 80, category: "tools" },
+  { name: "Make.com", percentage: 65, category: "tools" }
 ];
 
 // ======================================================
