@@ -228,7 +228,7 @@ export const projects = [
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT9, // Updated placeholder to match project ID
     githubUrl: "https://github.com/Mujtaba523/Weekly-AI-news-digest", // Replace if needed
     demoUrl: "#" // Placeholder for demo URL
-  }
+  },
   {
     id: "project3",
     title: "Deep Learning Based Interviewing Expert System with Knowledge Base",
