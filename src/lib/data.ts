@@ -24,7 +24,9 @@ export const PLACEHOLDERS = {
     PROJECT5: "https://i.postimg.cc/662ScJ5Z/1711797510330.jpg",
     PROJECT6: "https://i.postimg.cc/nhZPnXKK/Untitled-3.png",
     PROJECT7: "https://i.postimg.cc/fRKgyM5G/Space-Analytics-Dashboard.png",
-    PROJECT8: "https://i.postimg.cc/d17W5rvF/Untitled.png",},
+    PROJECT8: "https://i.postimg.cc/d17W5rvF/Untitled.png",
+    PROJECT9: "https://i.imghippo.com/files/jpg9990SEM.jpg"},
+    
 
   CERTIFICATE_URL: {
     CERT1: "https://www.cloudskillsboost.google/public_profiles/23f84474-7463-4fee-8fc5-72d413cbde9d/badges/4667273?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
@@ -220,6 +222,15 @@ export const projects = [
   },
   {
     id: "project2",
+    title: "Weekly AI News Digest Using Make.com",
+    description: "Built an automated workflow in Make.com to generate and deliver a weekly AI news digest. Integrated Google Gemini for summarization and automated content delivery via slack. Designed for seamless, hands-free news aggregation and distribution.",
+    tags: ["Automation", "AI", "Make.com", "Integration"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT9, // Updated placeholder to match project ID
+    githubUrl: "https://github.com/Mujtaba523/Weekly-AI-news-digest", // Replace if needed
+    demoUrl: "#" // Placeholder for demo URL
+  }
+  {
+    id: "project3",
     title: "Deep Learning Based Interviewing Expert System with Knowledge Base",
     description: "NLP-driven expert system that dynamically asks and scores technical interview answers using keyword similarity and trained models. Achieved 85% scoring accuracy.",
     tags: ["NLP", "LLM", "Deep Learning", "TensorFlow"],
@@ -228,7 +239,7 @@ export const projects = [
     demoUrl: "#" // Placeholder for demo URL
   },
   {
-    id: "project3",
+    id: "project4",
     title: "Alzheimer's Detection via MRI Scans",
     description: "Developed a CNN model using TensorFlow and Keras to classify Alzheimer's from MRI images. Deployed as an interactive web application using Streamlit.",
     tags: ["CNN", "Deep Learning", "TensorFlow", "Streamlit"],
@@ -237,7 +248,7 @@ export const projects = [
     demoUrl: "#"
   },
   {
-    id: "project4",
+    id: "project5",
     title: "Reddit Sentiment Analysis",
     description: "Trained LSTM and traditional ML models to classify sentiment on Reddit posts with up to 96% accuracy using deep learning and NLP techniques.",
     tags: ["NLP", "LSTM", "Sentiment Analysis", "Deep Learning"],
@@ -246,7 +257,7 @@ export const projects = [
     demoUrl: "#"
   },
   {
-    id: "project5",
+    id: "project6",
     title: "Weather Classifier",
     description: "Analyzed Kaggle-sourced weather data using multiple machine learning models and built a web app in Streamlit for real-time weather classification.",
     tags: ["Machine Learning", "Weather Data", "Streamlit", "Python"],
@@ -255,7 +266,7 @@ export const projects = [
     demoUrl: "#"
   },
   {
-    id: "project6",
+    id: "project7",
     title: "EMEA Sales Dashboard",
     description: "Designed a Power BI dashboard to visualize real-time sales performance across the EMEA region with interactive filters and KPI-based visualizations.",
     tags: ["Power BI", "Data Analytics", "Dashboard", "Visualization"],
@@ -264,7 +275,7 @@ export const projects = [
     demoUrl: "#"
   },
   {
-    id: "project7",
+    id: "project8",
     title: "Maven Analytics Space Challenge",
     description: "Created a detailed Power BI dashboard analyzing unicorn companies by revenue, market share, and user growth with drill-down and filtering features.",
     tags: ["Power BI", "Data Analytics", "Dashboard"],
@@ -273,7 +284,7 @@ export const projects = [
     demoUrl: "#"
   },
   {
-    id: "project8",
+    id: "project9",
     title: "Finance Pro – Stock and Currency Dashboard",
     description: "Built a financial dashboard for real-time stock visualization and currency conversion using APIs. Integrated with Streamlit for user interaction.",
     tags: ["Data Analytics", "APIs", "Streamlit", "Dashboard"],
