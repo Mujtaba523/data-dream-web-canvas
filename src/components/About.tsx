@@ -70,7 +70,7 @@ export default function About() {
               </Card>
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-2 sm:p-3 text-center">
-                  <h4 className="text-xl sm:text-2xl font-bold text-primary">90+</h4>
+                  <h4 className="text-xl sm:text-2xl font-bold text-primary">100+</h4>
                   <p className="text-xs">Projects</p>
                 </CardContent>
               </Card>
