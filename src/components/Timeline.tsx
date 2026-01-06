@@ -50,7 +50,7 @@ export default function Timeline() {
 
         {/* Tabbed interface for experience, education, and certifications */}
         <Tabs defaultValue="experience" className="w-full">
-          <TabsList className="mb-6 overflow-x-auto flex flex-nowrap w-full justify-start">
+          <TabsList className="mb-6 overflow-x-auto flex flex-nowrap w-full justify-center gap-2">
             <TabsTrigger value="experience" className="flex items-center gap-1 text-xs sm:text-sm whitespace-nowrap px-2 sm:px-3">
               <Briefcase className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Work Experience</span>
