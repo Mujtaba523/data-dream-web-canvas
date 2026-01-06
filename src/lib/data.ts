@@ -25,7 +25,10 @@ export const PLACEHOLDERS = {
     PROJECT6: "https://i.postimg.cc/nhZPnXKK/Untitled-3.png",
     PROJECT7: "https://i.postimg.cc/fRKgyM5G/Space-Analytics-Dashboard.png",
     PROJECT8: "https://i.postimg.cc/d17W5rvF/Untitled.png",
-    PROJECT9: "https://i.imghippo.com/files/jpg9990SEM.jpg"},
+    PROJECT9: "https://i.imghippo.com/files/jpg9990SEM.jpg",
+    PROJECT10: "https://ibb.co/fVD1SNbk",
+    PROJECT11: "https://ibb.co/qMHV0Q69"
+  },
     
 
   CERTIFICATE_URL: {
@@ -47,13 +50,21 @@ export const timelineItems = [
   {
     id: "exp1",
     type: "experience",
+    period: "Sep 2025 – Current",
+    title: "Junior AI Engineer",
+    organization: "PakData Management System (PDMS)",
+    description: "Designed and developed RabitWeb AI, an AI-powered website builder using LangGraph for agent orchestration, automated planning, and dynamic code generation. Built end-to-end computer vision pipelines for plant species and disease detection, covering data preprocessing, model training, evaluation, and deployment. Developed an advanced fracture analysis system leveraging deep learning to localize fractures, classify fracture type, assess severity, and identify the affected body part, supporting clinical decision assistance.",
+  },
+  {
+    id: "exp2",
+    type: "experience",
     period: "Aug 2024 – June 2025",
     title: "GTP Officer - IT Enterprise Architecture & SQA",
     organization: "1LINK (Pvt) Ltd",
     description: "Coordinated functional and UAT testing for Bill Payment System and IBFT according to 1LINK standards. Automated test scripts, improved test environments, and cut project timelines from 1 week to 2 days.",
   },
   {
-    id: "exp2",
+    id: "exp3",
     type: "experience",
     period: "Sep 2023 – Oct 2023",
     title: "Machine Learning Intern",
@@ -61,7 +72,7 @@ export const timelineItems = [
     description: "Implemented LSTM, decision trees, logistic regression, and Naïve Bayes models for sentiment and species prediction tasks. Achieved 96% accuracy in sentiment analysis and 95% in flower classification.",
   },
   {
-    id: "exp3",
+    id: "exp4",
     type: "experience",
     period: "Jun 2022 – Oct 2023",
     title: "Level 2 Seller – Data Science",
@@ -189,13 +200,30 @@ export const skills = [
   { name: "R", percentage: 40, category: "programming" },
   { name: "SQL", percentage: 85, category: "programming" },
   
-  // ML/AI & Data
-  { name: "TensorFlow/PyTorch", percentage: 85, category: "mlai" },
-  { name: "Scikit-Learn", percentage: 85, category: "mlai" },
-  { name: "NumPy", percentage: 80, category: "mlai" },
-  { name: "Pandas", percentage: 95, category: "mlai" },
-  { name: "Seaborn", percentage: 95, category: "mlai" },
-  { name: "Plotly", percentage: 80, category: "mlai" },
+// ML/AI & Data
+{ name: "TensorFlow / PyTorch", percentage: 85, category: "mlai" },
+{ name: "Scikit-Learn", percentage: 85, category: "mlai" },
+{ name: "NumPy", percentage: 80, category: "mlai" },
+{ name: "Pandas", percentage: 95, category: "mlai" },
+{ name: "Seaborn", percentage: 95, category: "mlai" },
+{ name: "Plotly", percentage: 80, category: "mlai" },
+
+// Deep Learning & CV
+{ name: "OpenCV", percentage: 85, category: "mlai" },
+{ name: "YOLO (v5–v11)", percentage: 80, category: "mlai" },
+{ name: "FastAPI", percentage: 80, category: "mlai" },
+
+// NLP & GenAI
+{ name: "NLTK / SpaCy", percentage: 80, category: "mlai" },
+{ name: "Transformers (BERT, GPT)", percentage: 75, category: "mlai" },
+{ name: "LangChain", percentage: 70, category: "mlai" },
+{ name: "LangGraph", percentage: 70, category: "mlai" },
+{ name: "Prompt Engineering", percentage: 80, category: "mlai" },
+
+// Data & MLOps
+{ name: "Ollama", percentage: 85, category: "mlai" },
+{ name: "Hugging Face", percentage: 65, category: "mlai" },
+{ name: "Streamlit / Dash", percentage: 80, category: "mlai" },
   
   // Tools & Platforms
   { name: "VS Code", percentage: 80, category: "tools" },
@@ -205,7 +233,8 @@ export const skills = [
   { name: "MS Excel", percentage: 80, category: "tools" },
   { name: "MySQL Server", percentage: 85, category: "tools" },
   { name: "Oracle SQL Server", percentage: 80, category: "tools" },
-  { name: "Make.com", percentage: 65, category: "tools" }
+  { name: "Make.com", percentage: 65, category: "tools" },
+  { name: "n8n", percentage: 75, category: "tools" }
 ];
 
 // ======================================================
@@ -292,6 +321,24 @@ export const projects = [
     image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT8,
     githubUrl: "https://github.com/Mujtaba523/Finance-Pro",
     demoUrl: "#"
+  },
+  {
+    id: "project10",
+    title: "Logo Detection System ",
+    description: "Built an end-to-end logo detection system using computer vision and deep learning to identify and localize brand logos in images, trained on a subset of the LogoDet-3K dataset using YOLO-v8.",
+    tags: ["Object Detection", "Computer Vision", "Image Processing", "YOLO"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT10,
+    githubUrl: "https://github.com/Mujtaba523/Finance-Pro",
+    demoUrl: "#"
+  },
+  {
+    id: "project11",
+    title: "Trading Automation Using n8n",
+    description: "Designed an automated cloud workflow to fetch, process, and transform files using rule-based logic, AWS Lambda, and JavaScript, enabling seamless file extraction, merging, and upload/update operations on Google Drive.",
+    tags: ["n8n", "Workflow Automation", "Trading", "AWS"],
+    image: PLACEHOLDERS.PROJECT_IMAGES.PROJECT11,
+    githubUrl: "https://github.com/Mujtaba523/Finance-Pro",
+    demoUrl: "#"
   }
 ];
 
@@ -321,7 +368,7 @@ export const publications = [
 export const typingTexts = [
   "Machine Learning Engineer",
   "Data Scientist",
-  "BI Analyst",
+  "AI Engineer",
   "Deep Learning Specialist"
 ];
 
