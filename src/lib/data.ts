@@ -27,7 +27,7 @@ export const PLACEHOLDERS = {
     PROJECT8: "https://i.postimg.cc/d17W5rvF/Untitled.png",
     PROJECT9: "https://i.imghippo.com/files/jpg9990SEM.jpg",
     PROJECT10: "https://ibb.co/fVD1SNbk",
-    PROJECT11: "https://ibb.co/qMHV0Q69"
+    PROJECT11: "https://i.postimg.cc/J08ZXpng/Screenshot-2026-01-06-at-2-57-10-PM.png"
   },
     
 
